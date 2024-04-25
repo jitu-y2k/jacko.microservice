@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Jacko.Services.CouponAPI.props" />
+</Project>

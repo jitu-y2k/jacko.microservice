@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Ev10niXnPdQgBu8kI6f52Yn13KFp5sGJpM5rhGu5KXc=",
+  "Source": "Jacko.Services.AuthAPI",
+  "BasePath": "_content/Jacko.Services.AuthAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

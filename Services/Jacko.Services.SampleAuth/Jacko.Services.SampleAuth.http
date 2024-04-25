@@ -1,0 +1,7 @@
+﻿@Jacko.Services.SampleAuth_HostAddress = http://localhost:5291
+
+GET {{Jacko.Services.SampleAuth_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
