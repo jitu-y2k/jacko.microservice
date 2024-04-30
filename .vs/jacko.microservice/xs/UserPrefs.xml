@@ -1,30 +1,135 @@
-﻿<Properties StartupConfiguration="{F0053A22-CF95-49EF-8D74-19E67BFDAC61}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Services/Jacko.Services.CouponAPI/Program.cs">
+﻿<Properties StartupConfiguration="{3192EEAB-6BEC-43EB-BE1E-4B03CABB70CD}|https">
+  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.CouponAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.ShoppingCartAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.ProductAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.AuthAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.OrderAPI FirstBuild="True" PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <DisabledProjects>
+    <String>Jacko.Web/Jacko.Web.csproj</String>
+  </DisabledProjects>
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects Startup" Name="Multiple Projects Startup">
+      <Items>
+        <StartupItem ItemId="{E5C8FFF3-1FAA-4B75-A3EF-46AAA58B9161}" ItemName="Jacko.Services.AuthAPI" ConfigurationId="https" />
+        <StartupItem ItemId="{8553BE1A-BD9F-4C84-B8D1-D161D05CCE4B}" ItemName="Jacko.Services.CouponAPI" ConfigurationId="https" />
+        <StartupItem ItemId="{67140359-5C03-4DCC-B08B-A2715EECD9EA}" ItemName="Jacko.Services.ProductAPI" ConfigurationId="https" />
+        <StartupItem ItemId="{87F1B824-128E-4FFA-BF74-E6280450D7C1}" ItemName="Jacko.Services.ShoppingCartAPI" ConfigurationId="https" />
+        <StartupItem ItemId="{0EB34B82-3F53-4CAF-9FDE-D8C9AD993C38}" ItemName="Jacko.Web" ConfigurationId="https" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.FrontEnd.Jacko.Web PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.SampleAuth PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/Jacko.Services.ProductAPI/Program.cs">
     <Files>
-      <File FileName="Services/CouponAPI/CouponAPI.http" Line="8" Column="1" />
-      <File FileName="Services/CouponAPI/Models/Coupon.cs" Line="12" Column="12" />
-      <File FileName="Services/CouponAPI/Program.cs" Line="19" Column="1" />
-      <File FileName="Services/CouponAPI/appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="Services/CouponAPI/Properties/launchSettings.json" Line="26" Column="48" />
-      <File FileName="Services/CouponAPI/appsettings.json" Line="9" Column="7" />
-      <File FileName="Services/CouponAPI/Models/Dto/CouponDto.cs" Line="7" Column="22" />
-      <File FileName="Services/CouponAPI/Data/AppDbContext.cs" Line="12" Column="4" />
-      <File FileName="Services/CouponAPI/Controllers/CouponAPIController.cs" Line="14" Column="27" />
+      <File FileName="Services/Jacko.Services.CouponAPI/Migrations/20240423201616_AddCouponEntity.cs" />
+      <File FileName="Services/Jacko.Services.CouponAPI/Migrations/20240423202500_CouponData.cs" />
+      <File FileName="Services/Jacko.Services.CouponAPI/Models/Dto/ResponseDto.cs" />
+      <File FileName="Services/Jacko.Services.CouponAPI/MappingConfig.cs" Line="20" Column="16" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Program.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Data/AppDbContext.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Migrations/20240424095304_AuthEntities.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/appsettings.json" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Models/ApplicationUser.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Migrations/20240424100635_AddNameToUserEntity.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Controllers/AuthController.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Models/Dto/ResponseDto.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Models/Dto/UserDto.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Models/Dto/LoginRequestDto.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Models/Dto/LoginResponseDto.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Properties/launchSettings.json" />
+      <File FileName="Services/Jacko.Services.AuthAPI/JwtOptions.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Services/IServices/IAuthService.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Services/AuthService.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Services/IServices/IJwtTokenGenerator.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Services/JwtTokenGenerator.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Views/Shared/_Layout.cshtml" />
+      <File FileName="FrontEnd/Jacko.Web/Program.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Views/Shared/_Layout.cshtml.css" />
+      <File FileName="FrontEnd/Jacko.Web/Controllers/CouponController.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Views/Coupon/CouponCreate.cshtml" />
+      <File FileName="FrontEnd/Jacko.Web/Views/Coupon/CouponDelete.cshtml" />
+      <File FileName="FrontEnd/Jacko.Web/Views/Coupon/CouponIndex.cshtml" />
+      <File FileName="FrontEnd/Jacko.Web/Views/_ViewStart.cshtml" />
+      <File FileName="FrontEnd/Jacko.Web/Views/_ViewImports.cshtml" />
+      <File FileName="FrontEnd/Jacko.Web/Service/IService/ICouponService.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Service/CouponService.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Service/IService/IBaseService.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Models/RequestDto.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Utility/SD.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Service/BaseService.cs" />
+      <File FileName="FrontEnd/Jacko.Web/appsettings.json" />
+      <File FileName="FrontEnd/Jacko.Web/Views/Shared/_Notifications.cshtml" />
+      <File FileName="FrontEnd/Jacko.Web/Controllers/AuthController.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Models/LoginRequestDto.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Models/RegistrationRequestDto.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Models/LoginResponseDto.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Models/UserDto.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Service/IService/ITokenProvider.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Service/TokenProvider.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Views/Auth/Login.cshtml" />
+      <File FileName="FrontEnd/Jacko.Web/Views/Auth/Register.cshtml" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Models/Dto/RegistrationRequestDto.cs" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Jacko.Services.AuthAPI.csproj" />
+      <File FileName="Services/Jacko.Services.SampleAuth/Jacko.Services.SampleAuth.csproj" />
+      <File FileName="Services/Jacko.Services.SampleAuth/appsettings.json" />
+      <File FileName="Services/Jacko.Services.SampleAuth/Data/AppDbContext.cs" />
+      <File FileName="Services/Jacko.Services.SampleAuth/Program.cs" />
+      <File FileName="Services/Jacko.Services.SampleAuth/Migrations/20240425115045_AddIdentityTables.cs" />
+      <File FileName="Services/Jacko.Services.SampleAuth/WeatherForecast.cs" />
+      <File FileName="Services/Jacko.Services.SampleAuth/Models/ApplicationUser.cs" />
+      <File FileName="Services/Jacko.Services.SampleAuth/Migrations/20240425121754_AddedNameToUsersTable.cs" />
+      <File FileName="Services/Jacko.Services.CouponAPI/Controllers/CouponAPIController.cs" Line="14" Column="16" />
+      <File FileName="Services/Jacko.Services.CouponAPI/Extensions/WebAppBuilderExtensions.cs" Line="16" Column="15" />
+      <File FileName="Services/Jacko.Services.CouponAPI/Jacko.Services.CouponAPI.csproj" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Jacko.Services.ProductAPI.csproj" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Models/Product.cs" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Models/Dto/ProductDto.cs" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Models/Dto/ResponseDto.cs" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Data/AppDbContext.cs" Line="57" Column="10" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Program.cs" Line="16" Column="1" />
+      <File FileName="Services/Jacko.Services.ProductAPI/appsettings.json" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Migrations/20240429081230_AddProductEntity.cs" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Migrations/20240429081336_SeedProductData.cs" Line="9" Column="23" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Controllers/ProductController.cs" Line="26" Column="10" />
+      <File FileName="Services/Jacko.Services.ProductAPI/MappingConfig.cs" Line="21" Column="1" />
+      <File FileName="Services/Jacko.Services.CouponAPI/Program.cs" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Extensions/WebAppBuilderExtensions.cs" Line="30" Column="30" />
+      <File FileName="Services/Jacko.Services.ProductAPI/JwtOptions.cs" Line="8" Column="25" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Jacko.Microservice">
+          <Node name="Jacko.Microservice" expanded="True">
             <Node name="Services" expanded="True">
-              <Node name="Jacko.Services.CouponAPI" expanded="True">
-                <Node name="Dependencies" expanded="True" />
-                <Node name="Controllers" expanded="True" selected="True" />
+              <Node name="Jacko.Services.AuthAPI" expanded="True">
                 <Node name="Data" expanded="True" />
                 <Node name="Models" expanded="True">
                   <Node name="Dto" expanded="True" />
                 </Node>
+                <Node name="Services" expanded="True">
+                  <Node name="IServices" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Jacko.Services.CouponAPI" expanded="True">
+                <Node name="Dependencies" expanded="True" />
+                <Node name="Controllers" expanded="True" />
+                <Node name="Extensions" expanded="True" />
+                <Node name="Migrations" expanded="True" />
+                <Node name="Models" expanded="True">
+                  <Node name="Dto" expanded="True" />
+                </Node>
                 <Node name="Properties" expanded="True" />
-                <Node name="appsettings.json" expanded="True" />
+              </Node>
+              <Node name="Jacko.Services.ProductAPI">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Data" expanded="True" />
+                <Node name="Extensions" expanded="True" />
+                <Node name="Migrations" expanded="True" />
+                <Node name="Program.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -32,27 +137,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.FrontEnd.Jacko.Web PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
-  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.ProductAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.AuthAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
-  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.SampleAuth FirstBuild="True" PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
-  <MultiItemStartupConfigurations>
-    <MultiItemSolutionRunConfiguration Id="Multiple Projects Startup" Name="Multiple Projects Startup">
-      <Items>
-        <StartupItem ItemId="{E5C8FFF3-1FAA-4B75-A3EF-46AAA58B9161}" ItemName="Jacko.Services.AuthAPI" ConfigurationId="https" />
-        <StartupItem ItemId="{8553BE1A-BD9F-4C84-B8D1-D161D05CCE4B}" ItemName="Jacko.Services.CouponAPI" ConfigurationId="https" />
-        <StartupItem ItemId="{67140359-5C03-4DCC-B08B-A2715EECD9EA}" ItemName="Jacko.Services.ProductAPI" ConfigurationId="https" />
-        <StartupItem ItemId="{0EB34B82-3F53-4CAF-9FDE-D8C9AD993C38}" ItemName="Jacko.Web" ConfigurationId="https" />
-      </Items>
-    </MultiItemSolutionRunConfiguration>
-  </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.CouponAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
-  <DisabledProjects>
-    <String>Jacko.Web/Jacko.Web.csproj</String>
-  </DisabledProjects>
 </Properties>

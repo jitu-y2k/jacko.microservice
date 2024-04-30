@@ -26,6 +26,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/Views/Cart/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9DaGVja291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/Views/Coupon/CouponCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cG9uL0NvdXBvbkNyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/Views/Home/ProductDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcm9kdWN0RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/Views/Shared/Error.cshtml]

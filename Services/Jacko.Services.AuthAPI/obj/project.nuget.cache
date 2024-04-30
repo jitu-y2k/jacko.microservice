@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rHkPzywfRgrhR2mkl4OMBqMcDRFwhFt1zWO3ioh0RZfJ0Z4ZiSg/8AX86Mk1t8y25yJ9PIihEhenILQHSQVn/A==",
+  "dgSpecHash": "UChW6Nk/9Vuak1Ynvdw3NzC2iCao54r14hprYpu9DOVovlW+LE5aUidqbiO4aVme6doz39jr58Vk7esIM4tXWg==",
   "success": true,
   "projectFilePath": "/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.AuthAPI/Jacko.Services.AuthAPI.csproj",
   "expectedPackageFiles": [

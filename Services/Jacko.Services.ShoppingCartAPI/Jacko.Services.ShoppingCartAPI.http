@@ -1,0 +1,7 @@
+﻿@Jacko.Services.ShoppingCartAPI_HostAddress = http://localhost:5176
+
+GET {{Jacko.Services.ShoppingCartAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+

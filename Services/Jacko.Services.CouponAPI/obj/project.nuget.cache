@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zdPXK3JAsxxN8eVmZ2HgMxD6VmNShgVG/OhyYANi4x2+Y1XkVQ8SDLNygKmoq27CIHuYF22IlRuG5kfp282bhw==",
+  "dgSpecHash": "wWEwoNkPf9PBv2bmJVgCWpRbyuqz52eEg+ylXr1uIqr/ohkTvNb41hWjffK7iRM2hL/eFYuwgHOYU7zROqROdQ==",
   "success": true,
   "projectFilePath": "/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.CouponAPI/Jacko.Services.CouponAPI.csproj",
   "expectedPackageFiles": [

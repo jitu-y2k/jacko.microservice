@@ -33,20 +33,36 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" asp-area="" asp-controller="Coupon" asp-action="CouponIndex">Coupon</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Cart" asp-action="Index">Cart</a></li>
                                 @*<li><a class="dropdown-item" href="#">Another action</a></li>*@
                                 @*<li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>*@
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>*@
                             </ul>
                         </li>
                     </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Auth" asp-action="Register">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Auth" asp-action="Login">Login</a>
-                        </li>
-                    </ul>
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Auth" asp-action="Register">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Auth" asp-action="Login">Login</a>
+                            </li>
+                        </ul>
+                    }
+                    else
+                    {
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">Hello, @User.Identity.Name!</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Auth" asp-action="Logout">Logout</a>
+                            </li>
+                        </ul>
+                    }
+
                 </div>
             </div>
         </nav>

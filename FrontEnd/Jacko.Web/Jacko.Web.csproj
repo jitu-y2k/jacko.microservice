@@ -11,15 +11,18 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.4" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.4" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Coupon\" />
     <None Remove="Utility\" />
     <None Remove="Views\Auth\" />
+    <None Remove="Views\Cart\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Coupon\" />
     <Folder Include="Utility\" />
     <Folder Include="Views\Auth\" />
+    <Folder Include="Views\Cart\" />
   </ItemGroup>
 </Project>
