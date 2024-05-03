@@ -7,11 +7,11 @@ namespace Jacko.MessageBus;
 public class MessageBus : IMessageBus
 {
 
-    private readonly string connectionString = "";
+    
 
     public async Task PublishMessage(object message, string topic_queue_name)
     {
-        await using var client = new ServiceBusClient(connectionString);
+        await using var client = new ServiceBusClient("");
 
         ServiceBusSender sender = client.CreateSender(topic_queue_name);
 

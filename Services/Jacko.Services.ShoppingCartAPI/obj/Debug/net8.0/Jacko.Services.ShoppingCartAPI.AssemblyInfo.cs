@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jacko.Services.ShoppingCartAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a6a94d228aed28f12ccfdf8cda98d6c9aedbb7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+900b4c6d9505479042b620dc18ddb4a62c01816c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jacko.Services.ShoppingCartAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jacko.Services.ShoppingCartAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
