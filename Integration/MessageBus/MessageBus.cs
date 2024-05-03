@@ -7,7 +7,7 @@ namespace Jacko.MessageBus;
 public class MessageBus : IMessageBus
 {
 
-    private readonly string connectionString = "<Your Azure Service Bus Connection String>";
+    private readonly string connectionString = "";
 
     public async Task PublishMessage(object message, string topic_queue_name)
     {
