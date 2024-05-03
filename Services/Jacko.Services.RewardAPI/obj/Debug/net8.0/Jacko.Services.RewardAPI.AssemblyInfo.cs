@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jacko.Services.RewardAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ab4455b17e7bd9be39933377a54dc5f4e87faf8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a6a94d228aed28f12ccfdf8cda98d6c9aedbb7c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jacko.Services.RewardAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jacko.Services.RewardAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
