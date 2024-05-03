@@ -7,7 +7,7 @@ namespace Jacko.MessageBus;
 public class MessageBus : IMessageBus
 {
 
-    private readonly string connectionString = "Endpoint=sb://js-servbus1.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=ZdpdjnnOCrksuqY7ujwgf+hdFNlZXzWaU+ASbDD77ZQ=";
+    private readonly string connectionString = "<Your Azure Service Bus Connection String>";
 
     public async Task PublishMessage(object message, string topic_queue_name)
     {
