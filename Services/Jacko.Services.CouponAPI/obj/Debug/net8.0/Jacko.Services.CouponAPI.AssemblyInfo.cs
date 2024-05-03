@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jacko.Services.CouponAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+900b4c6d9505479042b620dc18ddb4a62c01816c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61f2ef470e8a6661fa61c41979cc43491a1a256c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jacko.Services.CouponAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jacko.Services.CouponAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

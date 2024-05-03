@@ -7,11 +7,11 @@ namespace Jacko.MessageBus;
 public class MessageBus : IMessageBus
 {
 
-    
+    private readonly string connectionString = "<Your Azure Service Bus Connection String>";
 
     public async Task PublishMessage(object message, string topic_queue_name)
     {
-        await using var client = new ServiceBusClient("");
+        await using var client = new ServiceBusClient(connectionString);
 
         ServiceBusSender sender = client.CreateSender(topic_queue_name);
 
