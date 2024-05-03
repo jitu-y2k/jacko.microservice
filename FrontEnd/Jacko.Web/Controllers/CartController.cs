@@ -119,6 +119,22 @@ namespace Jacko.Web.Controllers
             return View();
         }
 
+        public async Task<IActionResult> EmailCart(CartDto cartDto)
+        {
+            CartDto cart = await LoadCartBasedOnLoggedInUser();
+
+            cart.CartHeader.Email = User.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Email)?.Value;
+
+            ResponseDto responseDto = await _cartService.EmailCart(cart);
+
+            if (responseDto!=null && responseDto.IsSuccess)
+            {
+                TempData["success"] = "Cart email is triggered";
+                return RedirectToAction(nameof(Index));
+            }
+            return View(cartDto);
+        }
+
         private async Task<CartDto> LoadCartBasedOnLoggedInUser()
         {
             var userId = User.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Sub)?.Value;

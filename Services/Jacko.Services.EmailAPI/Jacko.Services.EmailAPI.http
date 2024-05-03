@@ -1,0 +1,7 @@
+﻿@Jacko.Services.EmailAPI_HostAddress = http://localhost:5117
+
+GET {{Jacko.Services.EmailAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+

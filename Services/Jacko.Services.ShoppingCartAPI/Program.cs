@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Jacko.MessageBus;
 using Jacko.Services.ProductAPI;
 using Jacko.Services.ShoppingCartAPI.Data;
 using Jacko.Services.ShoppingCartAPI.Extensions;
@@ -21,6 +22,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICouponService, CouponService>();
+builder.Services.AddScoped<IMessageBus, MessageBus>();
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<BackEndAPIAuthenticationClientHandler>();

@@ -37,4 +37,9 @@
     <Folder Include="Extensions\" />
     <Folder Include="Utility\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Integration\MessageBus\Jacko.MessageBus.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

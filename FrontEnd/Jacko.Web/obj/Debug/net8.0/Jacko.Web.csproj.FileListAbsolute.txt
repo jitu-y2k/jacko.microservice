@@ -307,6 +307,7 @@
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/refs/System.Xml.XPath.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/refs/System.Xml.XPath.XDocument.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/refs/WindowsBase.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.AspNetCore.Razor.Language.dll
@@ -314,7 +315,14 @@
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.CodeAnalysis.Razor.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.resources.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.resources.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.resources.dll
@@ -367,11 +375,3 @@
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/obj/Debug/net8.0/Jacko.Web.pdb
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/obj/Debug/net8.0/Jacko.Web.genruntimeconfig.cache
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/obj/Debug/net8.0/ref/Jacko.Web.dll
-/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
-/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
-/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
-/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
-/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
-/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
-/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll

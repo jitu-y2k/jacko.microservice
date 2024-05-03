@@ -6,6 +6,7 @@ using AutoMapper;
 using Jacko.Services.ProductAPI.Data;
 using Jacko.Services.ProductAPI.Models;
 using Jacko.Services.ProductAPI.Models.Dto;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -45,6 +46,7 @@ namespace Jacko.Services.ProductAPI.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
+        [Authorize]
         public ResponseDto Get(int id)
         {
             try

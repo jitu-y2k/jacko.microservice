@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Jacko.MessageBus;
 using Jacko.Services.ShoppingCartAPI.Data;
 using Jacko.Services.ShoppingCartAPI.Models;
 using Jacko.Services.ShoppingCartAPI.Models.Dto;
@@ -24,16 +25,23 @@ namespace Jacko.Services.ShoppingCartAPI.Controllers
         private IMapper _mapper;
         private readonly IProductService _productService;
         private readonly ICouponService _couponService;
+        private readonly IMessageBus _messageBus;
         private readonly AppDbContext _db;
         private IConfiguration _configuration;
-        public CartAPIController(AppDbContext db,
-            IMapper mapper, IProductService productService, ICouponService couponService, IConfiguration configuration)
+        public CartAPIController(
+            AppDbContext db,
+            IMapper mapper,
+            IProductService productService,
+            ICouponService couponService,
+            IMessageBus messageBus,
+            IConfiguration configuration)
         {
             _db = db;
             this._response = new ResponseDto();
             _mapper = mapper;
             _productService = productService;
             _couponService = couponService;
+            _messageBus = messageBus;
             _configuration = configuration;
         }
         [HttpGet("GetCart/{userId}")]
@@ -69,6 +77,7 @@ namespace Jacko.Services.ShoppingCartAPI.Controllers
                     }
 
                 _response.Result = cart;
+                
             }
             catch (Exception ex)
             {
@@ -98,21 +107,21 @@ namespace Jacko.Services.ShoppingCartAPI.Controllers
             return _response;
         }
 
-        //[HttpPost("EmailCartRequest")]
-        //public async Task<object> EmailCartRequest([FromBody] CartDto cartDto)
-        //{
-        //    try
-        //    {
-        //        await _messageBus.PublishMessage(cartDto, _configuration.GetValue<string>("TopicAndQueueNames:EmailShoppingCartQueue"));
-        //        _response.Result = true;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _response.IsSuccess = false;
-        //        _response.Message = ex.ToString();
-        //    }
-        //    return _response;
-        //}
+        [HttpPost("EmailCartRequest")]
+        public async Task<object> EmailCartRequest([FromBody] CartDto cartDto)
+        {
+            try
+            {
+                await _messageBus.PublishMessage(cartDto, _configuration.GetValue<string>("TopicAndQueueNames:EmailShoppingCartQueue"));
+                _response.Result = true;
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.ToString();
+            }
+            return _response;
+        }
 
 
 

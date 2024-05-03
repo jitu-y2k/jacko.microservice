@@ -1,0 +1,13 @@
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Integration/MessageBus/bin/Debug/net8.0/Jacko.MessageBus.deps.json
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Integration/MessageBus/bin/Debug/net8.0/Jacko.MessageBus.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Integration/MessageBus/bin/Debug/net8.0/Jacko.MessageBus.pdb
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Integration/MessageBus/obj/Debug/net8.0/Jacko.MessageBus.csproj.AssemblyReference.cache
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Integration/MessageBus/obj/Debug/net8.0/Jacko.MessageBus.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Integration/MessageBus/obj/Debug/net8.0/Jacko.MessageBus.AssemblyInfoInputs.cache
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Integration/MessageBus/obj/Debug/net8.0/Jacko.MessageBus.AssemblyInfo.cs
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Integration/MessageBus/obj/Debug/net8.0/Jacko.MessageBus.csproj.CoreCompileInputs.cache
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Integration/MessageBus/obj/Debug/net8.0/Jacko.MessageBus.sourcelink.json
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Integration/MessageBus/obj/Debug/net8.0/Jacko.MessageBus.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Integration/MessageBus/obj/Debug/net8.0/refint/Jacko.MessageBus.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Integration/MessageBus/obj/Debug/net8.0/Jacko.MessageBus.pdb
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Integration/MessageBus/obj/Debug/net8.0/ref/Jacko.MessageBus.dll
