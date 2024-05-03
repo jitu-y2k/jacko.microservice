@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Jacko.Services.EmailAPI.props" />
+</Project>

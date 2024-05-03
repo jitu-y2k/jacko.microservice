@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/Jacko.Services.SampleAuth.props" />
+</Project>
