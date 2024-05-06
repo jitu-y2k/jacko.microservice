@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jacko.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61f2ef470e8a6661fa61c41979cc43491a1a256c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cef12723c097d2636f80ac0a87d1db71305a861")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jacko.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jacko.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
