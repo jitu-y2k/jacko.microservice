@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using Jacko.Services.EmailAPI.Data;
+using Jacko.Services.EmailAPI.Message;
 using Jacko.Services.EmailAPI.Models;
 using Jacko.Services.EmailAPI.Models.Dto;
 using Microsoft.EntityFrameworkCore;
@@ -34,6 +35,18 @@ namespace Jacko.Services.EmailAPI.Service
 
             await LogAndEmail(message.ToString(), cartDto.CartHeader.Email);
 
+        }
+
+        public async Task LogOrderPlaced(RewardsMessage rewardsDto)
+        {
+            string message = "New Order Placed. <br/> Order ID : " + rewardsDto.OrderId;
+            await LogAndEmail(message, "dotnetmastery@gmail.com");
+        }
+
+        public async Task RegisterUserEmailAndLog(string email)
+        {
+            string message = "User Registeration Successful. <br/> Email : " + email;
+            await LogAndEmail(message, "dotnetmastery@gmail.com");
         }
 
         private async Task<bool> LogAndEmail(string message, string email)

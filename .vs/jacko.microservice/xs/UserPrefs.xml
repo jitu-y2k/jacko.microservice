@@ -1,162 +1,106 @@
-﻿<Properties StartupConfiguration="Multiple Projects Startup">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Integration/MessageBus/MessageBus.cs">
+﻿<Properties StartupConfiguration="{0EB34B82-3F53-4CAF-9FDE-D8C9AD993C38}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.FrontEnd.Jacko.Web PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FrontEnd/Jacko.Web/Jacko.Web.csproj">
     <Files>
-      <File FileName="Services/Jacko.Services.CouponAPI/Migrations/20240423201616_AddCouponEntity.cs" />
-      <File FileName="Services/Jacko.Services.CouponAPI/Migrations/20240423202500_CouponData.cs" />
-      <File FileName="Services/Jacko.Services.CouponAPI/Models/Dto/ResponseDto.cs" />
-      <File FileName="Services/Jacko.Services.CouponAPI/MappingConfig.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Program.cs" Line="58" Column="1" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Data/AppDbContext.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Migrations/20240424095304_AuthEntities.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/appsettings.json" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Models/ApplicationUser.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Migrations/20240424100635_AddNameToUserEntity.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Controllers/AuthController.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Models/Dto/ResponseDto.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Models/Dto/UserDto.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Models/Dto/LoginRequestDto.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Models/Dto/LoginResponseDto.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Properties/launchSettings.json" />
-      <File FileName="Services/Jacko.Services.AuthAPI/JwtOptions.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Services/IServices/IAuthService.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Services/AuthService.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Services/IServices/IJwtTokenGenerator.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Services/JwtTokenGenerator.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Views/Shared/_Layout.cshtml" />
-      <File FileName="FrontEnd/Jacko.Web/Program.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Views/Shared/_Layout.cshtml.css" />
-      <File FileName="FrontEnd/Jacko.Web/Controllers/CouponController.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Views/Coupon/CouponCreate.cshtml" />
-      <File FileName="FrontEnd/Jacko.Web/Views/Coupon/CouponDelete.cshtml" />
-      <File FileName="FrontEnd/Jacko.Web/Views/Coupon/CouponIndex.cshtml" />
-      <File FileName="FrontEnd/Jacko.Web/Views/_ViewStart.cshtml" />
-      <File FileName="FrontEnd/Jacko.Web/Views/_ViewImports.cshtml" />
-      <File FileName="FrontEnd/Jacko.Web/Service/IService/ICouponService.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Service/CouponService.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Service/IService/IBaseService.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Models/RequestDto.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Utility/SD.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Service/BaseService.cs" />
-      <File FileName="FrontEnd/Jacko.Web/appsettings.json" Line="12" Column="44" />
-      <File FileName="FrontEnd/Jacko.Web/Views/Shared/_Notifications.cshtml" />
       <File FileName="FrontEnd/Jacko.Web/Controllers/AuthController.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Models/LoginRequestDto.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Models/RegistrationRequestDto.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Models/LoginResponseDto.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Models/UserDto.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Service/IService/ITokenProvider.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Service/TokenProvider.cs" />
-      <File FileName="FrontEnd/Jacko.Web/Views/Auth/Login.cshtml" />
-      <File FileName="FrontEnd/Jacko.Web/Views/Auth/Register.cshtml" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Models/Dto/RegistrationRequestDto.cs" />
-      <File FileName="Services/Jacko.Services.AuthAPI/Jacko.Services.AuthAPI.csproj" />
-      <File FileName="Services/Jacko.Services.SampleAuth/Jacko.Services.SampleAuth.csproj" />
-      <File FileName="Services/Jacko.Services.SampleAuth/appsettings.json" />
-      <File FileName="Services/Jacko.Services.SampleAuth/Data/AppDbContext.cs" />
-      <File FileName="Services/Jacko.Services.SampleAuth/Program.cs" />
-      <File FileName="Services/Jacko.Services.SampleAuth/Migrations/20240425115045_AddIdentityTables.cs" />
-      <File FileName="Services/Jacko.Services.SampleAuth/WeatherForecast.cs" />
-      <File FileName="Services/Jacko.Services.SampleAuth/Models/ApplicationUser.cs" />
-      <File FileName="Services/Jacko.Services.SampleAuth/Migrations/20240425121754_AddedNameToUsersTable.cs" />
-      <File FileName="Services/Jacko.Services.CouponAPI/Controllers/CouponAPIController.cs" />
-      <File FileName="Services/Jacko.Services.CouponAPI/Extensions/WebAppBuilderExtensions.cs" Line="1" Column="1" />
-      <File FileName="Services/Jacko.Services.CouponAPI/Jacko.Services.CouponAPI.csproj" Line="12" Column="5" />
-      <File FileName="Services/Jacko.Services.ProductAPI/Jacko.Services.ProductAPI.csproj" />
-      <File FileName="Services/Jacko.Services.ProductAPI/Models/Product.cs" />
-      <File FileName="Services/Jacko.Services.ProductAPI/Models/Dto/ProductDto.cs" />
-      <File FileName="Services/Jacko.Services.ProductAPI/Models/Dto/ResponseDto.cs" />
-      <File FileName="Services/Jacko.Services.ProductAPI/Data/AppDbContext.cs" />
-      <File FileName="Services/Jacko.Services.ProductAPI/Program.cs" Line="24" Column="34" />
-      <File FileName="Services/Jacko.Services.ProductAPI/appsettings.json" />
-      <File FileName="Services/Jacko.Services.ProductAPI/Migrations/20240429081230_AddProductEntity.cs" />
-      <File FileName="Services/Jacko.Services.ProductAPI/Migrations/20240429081336_SeedProductData.cs" />
-      <File FileName="Services/Jacko.Services.ProductAPI/Controllers/ProductController.cs" Line="49" Column="20" />
-      <File FileName="Services/Jacko.Services.ProductAPI/MappingConfig.cs" />
-      <File FileName="Services/Jacko.Services.CouponAPI/Program.cs" Line="67" Column="1" />
-      <File FileName="Services/Jacko.Services.ProductAPI/Extensions/WebAppBuilderExtensions.cs" />
-      <File FileName="Services/Jacko.Services.ShoppingCartAPI/Utility/BackEndAPIAuthenticationClientHandler.cs" Line="19" Column="13" />
-      <File FileName="Services/Jacko.Services.ShoppingCartAPI/Program.cs" Line="26" Column="1" />
-      <File FileName="Services/Jacko.Services.ShoppingCartAPI/Controllers/CartAPIController.cs" Line="115" Column="1" />
-      <File FileName="FrontEnd/Jacko.Web/Controllers/HomeController.cs" Line="34" Column="1" />
-      <File FileName="FrontEnd/Jacko.Web/Controllers/CartController.cs" Line="128" Column="1" />
-      <File FileName="FrontEnd/Jacko.Web/Views/Cart/Index.cshtml" Line="4" Column="46" />
-      <File FileName="FrontEnd/Jacko.Web/Service/CartService.cs" Line="28" Column="1" />
-      <File FileName="Integration/MessageBus/Class1.cs" Line="8" Column="2" />
-      <File FileName="Integration/MessageBus/IMessageBus.cs" Line="6" Column="64" />
-      <File FileName="Services/Jacko.Services.ShoppingCartAPI/appsettings.json" Line="24" Column="5" />
-      <File FileName="Services/Jacko.Services.EmailAPI/Models/EmailLogger.cs" Line="13" Column="1" />
-      <File FileName="Services/Jacko.Services.EmailAPI/Data/AppDbContext.cs" Line="14" Column="1" />
-      <File FileName="Services/Jacko.Services.EmailAPI/Jacko.Services.EmailAPI.csproj" Line="14" Column="70" />
-      <File FileName="Services/Jacko.Services.EmailAPI/Program.cs" Line="27" Column="1" />
-      <File FileName="Services/Jacko.Services.EmailAPI/Migrations/20240503065536_AddEmailLoggerTable.cs" Line="17" Column="18" />
-      <File FileName="Services/Jacko.Services.EmailAPI/Models/Dto/CartDetailsDto.cs" Line="1" Column="1" />
-      <File FileName="Services/Jacko.Services.EmailAPI/Models/Dto/CartDto.cs" Line="2" Column="34" />
-      <File FileName="Services/Jacko.Services.EmailAPI/Models/Dto/CartHeaderDto.cs" Line="16" Column="1" />
-      <File FileName="Services/Jacko.Services.EmailAPI/Models/Dto/ProductDto.cs" Line="1" Column="1" />
-      <File FileName="Services/Jacko.Services.EmailAPI/Extensions/ApplicationBuilderExtensions.cs" Line="19" Column="1" />
-      <File FileName="Services/Jacko.Services.EmailAPI/Messaging/IAzureServiceBusConsumer.cs" Line="7" Column="15" />
-      <File FileName="Services/Jacko.Services.EmailAPI/Messaging/AzureServiceBusConsumer.cs" Line="47" Column="1" />
-      <File FileName="Services/Jacko.Services.EmailAPI/appsettings.json" Line="10" Column="5" />
-      <File FileName="Services/Jacko.Services.CouponAPI/appsettings.json" Line="17" Column="5" />
-      <File FileName="Integration/MessageBus/Jacko.MessageBus.csproj" Line="11" Column="5" />
-      <File FileName="Services/Jacko.Services.EmailAPI/Service/EmptyInterface.cs" Line="8" Column="16" />
-      <File FileName="Services/Jacko.Services.EmailAPI/Service/EmailService.cs" Line="12" Column="17" />
-      <File FileName="FrontEnd/Jacko.Web/Models/CartHeaderDto.cs" Line="14" Column="1" />
-      <File FileName="Services/Jacko.Services.ShoppingCartAPI/Models/Dto/CartHeaderDto.cs" Line="19" Column="1" />
-      <File FileName="Services/Jacko.Services.ShoppingCartAPI/Models/CartHeader.cs" Line="1" Column="1" />
-      <File FileName="Services/Jacko.Services.ShoppingCartAPI/Properties/launchSettings.json" Line="39" Column="6" />
-      <File FileName="Services/Jacko.Services.ShoppingCartAPI/Models/Dto/CartDto.cs" Line="1" Column="1" />
-      <File FileName="Services/Jacko.Services.ShoppingCartAPI/Models/Dto/CartDetailsDto.cs" Line="1" Column="1" />
-      <File FileName="Gateway/Jacko.APIGateway/Extensions/WebAppBuilderExtensions.cs" Line="10" Column="59" />
-      <File FileName="Gateway/Jacko.APIGateway/Properties/launchSettings.json" Line="20" Column="7" />
-      <File FileName="Gateway/Jacko.APIGateway/appsettings.json" Line="15" Column="1" />
-      <File FileName="Gateway/Jacko.APIGateway/Program.cs" Line="9" Column="1" />
-      <File FileName="FrontEnd/Jacko.Web/Service/ProductService.cs" Line="54" Column="63" />
-      <File FileName="Gateway/Jacko.APIGateway/ocelot.json" Line="5" Column="15" />
-      <File FileName="Services/Jacko.Services.EmailAPI/appsettings.Development.json" Line="10" Column="1" />
+      <File FileName="FrontEnd/Jacko.Web/Controllers/OrderController.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Program.cs" Line="28" Column="17" />
+      <File FileName="FrontEnd/Jacko.Web/Service/OrderService.cs" />
+      <File FileName="Services/Jacko.Services.OrderAPI/Controllers/OrderController.cs" Line="206" Column="110" />
+      <File FileName="FrontEnd/Jacko.Web/Views/Order/OrderIndex.cshtml" />
+      <File FileName="FrontEnd/Jacko.Web/wwwroot/js/order.js" />
+      <File FileName="FrontEnd/Jacko.Web/Views/Shared/_Layout.cshtml" />
+      <File FileName="Services/Jacko.Services.RewardAPI/Messaging/AzureServiceBusConsumer.cs" Line="29" Column="1" />
+      <File FileName="Services/Jacko.Services.EmailAPI/Messaging/AzureServiceBusConsumer.cs" Line="36" Column="1" />
+      <File FileName="Services/Jacko.Services.ShoppingCartAPI/Controllers/CartAPIController.cs" Line="124" Column="18" />
+      <File FileName="Services/Jacko.Services.ShoppingCartAPI/Models/Dto/CartHeaderDto.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Service/IService/ICartService.cs" />
+      <File FileName="FrontEnd/Jacko.Web/Service/CartService.cs" Line="30" Column="42" />
+      <File FileName="FrontEnd/Jacko.Web/Controllers/CartController.cs" Line="159" Column="10" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Dockerfile" Line="13" Column="49" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Properties/launchSettings.json" />
+      <File FileName="Gateway/Jacko.APIGateway/appsettings.Development.json" />
+      <File FileName="Gateway/Jacko.APIGateway/appsettings.json" Line="1" Column="1" />
+      <File FileName="Gateway/Jacko.APIGateway/ocelot.json" />
+      <File FileName="Gateway/Jacko.APIGateway/ocelot.production.json" />
+      <File FileName="Gateway/Jacko.APIGateway/Program.cs" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Dockerfile" Line="20" Column="1" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Properties/launchSettings.json" Line="12" Column="14" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Controllers/ProductController.cs" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Program.cs" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.AuthAPI/appsettings.Production.json" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.AuthAPI/appsettings.Development.json" />
+      <File FileName="Services/Jacko.Services.AuthAPI/appsettings.json" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.AuthAPI/Program.cs" Line="49" Column="1" />
+      <File FileName="Services/Jacko.Services.CouponAPI/Dockerfile.json" Line="13" Column="1" />
+      <File FileName="Services/Jacko.Services.CouponAPI/appsettings.json" Line="16" Column="6" />
+      <File FileName="Services/Jacko.Services.CouponAPI/appsettings.Production.json" Line="5" Column="2" />
+      <File FileName="Services/Jacko.Services.CouponAPI/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.CouponAPI/Program.cs" Line="41" Column="24" />
+      <File FileName="Services/Jacko.Services.ShoppingCartAPI/appsettings.json" Line="25" Column="25" />
+      <File FileName="Services/Jacko.Services.ShoppingCartAPI/appsettings.Production.json" Line="7" Column="5" />
+      <File FileName="Services/Jacko.Services.ShoppingCartAPI/Program.cs" Line="30" Column="5" />
+      <File FileName="Services/Jacko.Services.ShoppingCartAPI/Dockerfile.txt" Line="12" Column="87" />
+      <File FileName="Integration/MessageBus/Jacko.MessageBus.csproj" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.EmailAPI/Dockerfile.json" Line="19" Column="12" />
+      <File FileName="Services/Jacko.Services.OrderAPI/Dockerfile.json" Line="16" Column="49" />
+      <File FileName="Integration/MessageBus/MessageBus.cs" Line="18" Column="6" />
+      <File FileName="Integration/MessageBus/RabbitMQMessageBus.cs" Line="34" Column="1" />
+      <File FileName="Services/Jacko.Services.EmailAPI/appsettings.json" Line="8" Column="3" />
+      <File FileName="docker-compose.yml" Line="17" Column="12" />
+      <File FileName=".dockerignore" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.ShoppingCartAPI/Extensions/WebAppBuilderExtensions.cs" Line="17" Column="48" />
+      <File FileName="Services/Jacko.Services.RewardAPI/appsettings.json" Line="9" Column="5" />
+      <File FileName="Services/Jacko.Services.EmailAPI/Program.cs" Line="42" Column="3" />
+      <File FileName="Services/Jacko.Services.EmailAPI/Messaging/RabbitMQEmailConsumer.cs" Line="32" Column="1" />
+      <File FileName="Services/Jacko.Services.EmailAPI/Service/EmailService.cs" Line="16" Column="4" />
+      <File FileName="Services/Jacko.Services.OrderAPI/Utility/BackEndAPIAuthenticationClientHandler.cs" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.OrderAPI/Utility/SD.cs" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.OrderAPI/Service/ProductService.cs" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.OrderAPI/Extensions/WebAppBuilderExtensions.cs" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.OrderAPI/Program.cs" Line="69" Column="1" />
+      <File FileName="Services/Jacko.Services.OrderAPI/appsettings.json" Line="31" Column="5" />
+      <File FileName="Services/Jacko.Services.RewardAPI/Messaging/IAzureServiceBusConsumer.cs" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.EmailAPI/Extensions/ApplicationBuilderExtensions.cs" Line="26" Column="1" />
+      <File FileName="Services/Jacko.Services.RewardAPI/Program.cs" Line="42" Column="3" />
+      <File FileName="Services/Jacko.Services.RewardAPI/Messaging/RabbitMQEmailConsumer.cs" Line="30" Column="1" />
+      <File FileName="Services/Jacko.Services.EmailAPI/Jacko.Services.EmailAPI.csproj" Line="20" Column="67" />
+      <File FileName="Services/Jacko.Services.RewardAPI/Jacko.Services.RewardAPI.csproj" Line="22" Column="67" />
+      <File FileName="Services/Jacko.Services.RewardAPI/Service/RewardService.cs" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.RewardAPI/Models/Rewards.cs" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.OrderAPI/Models/Dto/RewardsDto.cs" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.RewardAPI/Message/RewardsMessage.cs" Line="1" Column="1" />
+      <File FileName="FrontEnd/Jacko.Web/appsettings.json" Line="11" Column="44" />
+      <File FileName="FrontEnd/Jacko.Web/appsettings.Production.json" Line="11" Column="1" />
+      <File FileName="FrontEnd/Jacko.Web/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="Gateway/Jacko.APIGateway/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.RewardAPI/Data/AppDbContext.cs" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.ProductAPI/Models/Product.cs" Line="13" Column="42" />
+      <File FileName="Services/Jacko.Services.EmailAPI/appsettings.Production.json" Line="8" Column="36" />
+      <File FileName="Services/Jacko.Services.OrderAPI/appsettings.Production.json" Line="6" Column="59" />
+      <File FileName="Services/Jacko.Services.ProductAPI/appsettings.Production.json" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.ProductAPI/appsettings.json" Line="1" Column="1" />
+      <File FileName="Services/Jacko.Services.RewardAPI/appsettings.Production.json" Line="9" Column="5" />
+      <File FileName="Services/Jacko.Services.RewardAPI/Dockerfile" Line="13" Column="1" />
+      <File FileName="FrontEnd/Jacko.Web/Dockerfile" Line="12" Column="28" />
+      <File FileName=".env" Line="1" Column="24" />
+      <File FileName="Services/Jacko.Services.CouponAPI/Controllers/CouponAPIController.cs" Line="1" Column="1" />
+      <File FileName="FrontEnd/Jacko.Web/Jacko.Web.csproj" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Jacko.Microservice" selected="True">
-            <Node name="Gateway">
-              <Node name="Jacko.APIGateway" expanded="True">
-                <Node name="Dependencies" expanded="True" />
-                <Node name="Extensions" expanded="True" />
-                <Node name="Properties" expanded="True" />
+          <Node name="Jacko.Microservice">
+            <Node name="FrontEnd" expanded="True">
+              <Node name="Jacko.Web" selected="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="appsettings.json" expanded="True" />
               </Node>
-            </Node>
-            <Node name="Intgegration">
-              <Node name="Jacko.MessageBus" expanded="True" />
             </Node>
             <Node name="Services" expanded="True">
-              <Node name="Jacko.Services.CouponAPI" expanded="True">
-                <Node name="Dependencies" expanded="True" />
-                <Node name="Controllers" expanded="True" />
-                <Node name="Migrations" expanded="True" />
-                <Node name="Models" expanded="True">
-                  <Node name="Dto" expanded="True" />
-                </Node>
-                <Node name="Properties" expanded="True" />
-              </Node>
-              <Node name="Jacko.Services.EmailAPI">
-                <Node name="Dependencies" expanded="True" />
-                <Node name="Controllers" expanded="True" />
-                <Node name="Service" expanded="True" />
-              </Node>
-              <Node name="Jacko.Services.ProductAPI" expanded="True">
-                <Node name="Controllers" expanded="True" />
-                <Node name="Data" expanded="True" />
-              </Node>
-              <Node name="Jacko.Services.ShoppingCartAPI" expanded="True">
-                <Node name="Controllers" expanded="True" />
-                <Node name="Extensions" expanded="True" />
-                <Node name="Models" expanded="True">
-                  <Node name="Dto" expanded="True" />
-                </Node>
-                <Node name="Properties" expanded="True" />
-                <Node name="Service" expanded="True" />
-                <Node name="Utility" expanded="True" />
+              <Node name="Jacko.Services.AuthAPI">
+                <Node name="appsettings.json" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -164,15 +108,26 @@
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State>
-          <Value>JsonConvert.SerializeObject(cart)</Value>
+          <Value>builder.Configuration["AsyncCommunictionMode"]</Value>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.CouponAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.EmailAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.ShoppingCartAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.RewardAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
   <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.OrderAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <DisabledProjects>
+    <String>Jacko.Web/Jacko.Web.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web/CustomHandlers/CookieEventsHandler.cs" relfile="FrontEnd/Jacko.Web/CustomHandlers/CookieEventsHandler.cs" line="20" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Gateway.Jacko.APIGateway PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects Startup" Name="Multiple Projects Startup">
       <Items>
@@ -182,22 +137,14 @@
         <StartupItem ItemId="{3A70903A-83E3-4CDB-A939-6BC77802925A}" ItemName="Jacko.Services.EmailAPI" ConfigurationId="https" />
         <StartupItem ItemId="{3192EEAB-6BEC-43EB-BE1E-4B03CABB70CD}" ItemName="Jacko.Services.OrderAPI" ConfigurationId="https" />
         <StartupItem ItemId="{67140359-5C03-4DCC-B08B-A2715EECD9EA}" ItemName="Jacko.Services.ProductAPI" ConfigurationId="https" />
+        <StartupItem ItemId="{6713822C-C9E2-4A8F-BF35-BC812D25E857}" ItemName="Jacko.Services.RewardAPI" ConfigurationId="https" />
         <StartupItem ItemId="{87F1B824-128E-4FFA-BF74-E6280450D7C1}" ItemName="Jacko.Services.ShoppingCartAPI" ConfigurationId="https" />
         <StartupItem ItemId="{0EB34B82-3F53-4CAF-9FDE-D8C9AD993C38}" ItemName="Jacko.Web" ConfigurationId="https" />
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.ProductAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
   <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.AuthAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
-  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.ShoppingCartAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
-  <DisabledProjects>
-    <String>Jacko.Web/Jacko.Web.csproj</String>
-  </DisabledProjects>
-  <MonoDevelop.Ide.ItemProperties.FrontEnd.Jacko.Web PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
-  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.EmailAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
-  <MonoDevelop.Ide.ItemProperties.Gateway.Jacko.APIGateway PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
   <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.SampleAuth PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.ProductAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.ItemProperties.Services.Jacko.Services.CouponAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
 </Properties>

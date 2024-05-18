@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jacko-reward-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jacko-reward-service
+  template:
+    metadata:
+      labels:
+        app: jacko-reward-service
+    spec:
+      containers:
+        - name: jacko-reward-service
+          image: jituy2k/reward-service:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jacko-reward-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: jacko-reward-service
+  ports:
+  - name: jacko-reward-service
+    protocol: TCP
+    port: 8080
+    targetPort: 8080
+

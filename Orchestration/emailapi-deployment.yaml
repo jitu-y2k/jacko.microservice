@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jacko-email-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jacko-email-service
+  template:
+    metadata:
+      labels:
+        app: jacko-email-service
+    spec:
+      containers:
+        - name: jacko-email-service
+          image: jituy2k/email-service:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jacko-email-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: jacko-email-service
+  ports:
+  - name: jacko-email-service
+    protocol: TCP
+    port: 8080
+    targetPort: 8080
+

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Jacko.MessageBus;
 using Jacko.Services.OrderAPI;
 using Jacko.Services.OrderAPI.Data;
 using Jacko.Services.OrderAPI.Extensions;
@@ -24,6 +25,17 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<BackEndAPIAuthenticationClientHandler>();
+
+
+if (builder.Configuration["AsyncCommunicationMode"].ToLower() == "rabbitmq")
+{
+    builder.Services.AddScoped<IMessageBus, RabbitMQMessageBus>();
+}
+else
+{
+    builder.Services.AddScoped<IMessageBus, MessageBus>();
+}
+
 builder.Services.AddHttpClient("Product", u => u.BaseAddress =
 new Uri(builder.Configuration["ServiceUrls:ProductAPI"])).AddHttpMessageHandler<BackEndAPIAuthenticationClientHandler>();
 
@@ -40,15 +52,15 @@ builder.Services.AddAuthorization();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 Stripe.StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jacko-auth-service
+spec:
+  selector:
+    app: jacko-auth-service
+  ports:
+    - protocol: TCP
+      port: 9080
+      targetPort: 8080
+

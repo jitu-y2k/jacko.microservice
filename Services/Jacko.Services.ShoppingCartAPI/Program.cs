@@ -22,7 +22,16 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICouponService, CouponService>();
-builder.Services.AddScoped<IMessageBus, MessageBus>();
+
+if (builder.Configuration["AsyncCommunicationMode"].ToLower() == "rabbitmq")
+{
+    builder.Services.AddScoped<IMessageBus, RabbitMQMessageBus>();
+}
+else
+{
+    builder.Services.AddScoped<IMessageBus, MessageBus>();
+}
+
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<BackEndAPIAuthenticationClientHandler>();
@@ -43,13 +52,13 @@ builder.Services.AddAuthorization();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();

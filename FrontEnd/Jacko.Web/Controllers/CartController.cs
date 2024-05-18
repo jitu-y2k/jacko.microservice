@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 using Jacko.Web.Models;
 using Jacko.Web.Service;
 using Jacko.Web.Service.IService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Jacko.Web.Utility;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -25,6 +27,7 @@ namespace Jacko.Web.Controllers
         }
 
         // GET: /<controller>/
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             CartDto cart = await LoadCartBasedOnLoggedInUser();
@@ -78,6 +81,7 @@ namespace Jacko.Web.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize]
         public async Task<IActionResult> Checkout()
         {
             return View(await LoadCartBasedOnLoggedInUser());
@@ -85,6 +89,7 @@ namespace Jacko.Web.Controllers
 
         [HttpPost]
         [ActionName("Checkout")]
+        [Authorize]
         public async Task<IActionResult> Checkout(CartDto cartDto)
         {
             
@@ -98,6 +103,8 @@ namespace Jacko.Web.Controllers
 
             if (response != null && response.IsSuccess)
             {
+                //Empty user cart as order is placed.
+                EmptyUserCart();
                 //get stripe session and redirect to stripe to place order
                 //
                 var domain = Request.Scheme + "://" + Request.Host.Value + "/";
@@ -119,6 +126,22 @@ namespace Jacko.Web.Controllers
             return View();
         }
 
+        public async Task<IActionResult> Confirmation(int orderId)
+        {
+            ResponseDto? response = await _orderService.ValidateStripeSession(orderId);
+            if (response != null & response.IsSuccess)
+            {
+
+                OrderHeaderDto orderHeader = JsonConvert.DeserializeObject<OrderHeaderDto>(Convert.ToString(response.Result));
+                if (orderHeader.Status == SD.Status_Approved)
+                {
+                    return View(orderId);
+                }
+            }
+            //redirect to some error page based on status
+            return View(orderId);
+        }
+
         public async Task<IActionResult> EmailCart(CartDto cartDto)
         {
             CartDto cart = await LoadCartBasedOnLoggedInUser();
@@ -132,7 +155,20 @@ namespace Jacko.Web.Controllers
                 TempData["success"] = "Cart email is triggered";
                 return RedirectToAction(nameof(Index));
             }
-            return View(cartDto);
+            return RedirectToAction(nameof(Index));
+        }
+
+        private async Task<bool> EmptyUserCart()
+        {
+            var userId = User.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Sub)?.Value;
+
+            var response = await _cartService.EmptyUserCart(userId);
+
+            if (response!=null && response.IsSuccess)
+            {
+                return true;
+            }
+            return false;
         }
 
         private async Task<CartDto> LoadCartBasedOnLoggedInUser()

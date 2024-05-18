@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jacko-auth-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jacko-auth-service
+  template:
+    metadata:
+      labels:
+        app: jacko-auth-service
+    spec:
+      containers:
+        - name: jacko-auth-service
+          image: jituy2k/auth-service:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jacko-auth-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: jacko-auth-service
+  ports:
+  - name: jacko-auth-service
+    protocol: TCP
+    port: 8080
+    targetPort: 8080
+

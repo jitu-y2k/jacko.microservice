@@ -138,3 +138,4 @@
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.ProductAPI/obj/Debug/net8.0/Jacko.Services.ProductAPI.pdb
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.ProductAPI/obj/Debug/net8.0/Jacko.Services.ProductAPI.genruntimeconfig.cache
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.ProductAPI/obj/Debug/net8.0/ref/Jacko.Services.ProductAPI.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.ProductAPI/bin/Debug/net8.0/appsettings.Production.json

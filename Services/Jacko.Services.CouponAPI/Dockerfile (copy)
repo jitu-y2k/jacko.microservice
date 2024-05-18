@@ -1,0 +1,19 @@
+﻿FROM mcr.microsoft.com/dotnet/sdk:8.0-preview AS build
+
+WORKDIR /src
+
+COPY ["Jacko.Services.CouponAPI.csproj", ""]
+
+RUN dotnet restore
+
+COPY . .
+
+RUN dotnet publish -o /publish/out -c Release /p:UseAppHost=false
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-preview
+
+WORKDIR /app
+
+COPY --from=build /publish/out/ .
+
+ENTRYPOINT ["dotnet", "Jacko.Services.CouponAPI.dll"]

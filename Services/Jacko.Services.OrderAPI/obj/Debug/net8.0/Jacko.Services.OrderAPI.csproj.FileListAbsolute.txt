@@ -140,3 +140,12 @@
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI/obj/Debug/net8.0/Jacko.Services.OrderAPI.pdb
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI/obj/Debug/net8.0/Jacko.Services.OrderAPI.genruntimeconfig.cache
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI/obj/Debug/net8.0/ref/Jacko.Services.OrderAPI.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI/bin/Debug/net8.0/Azure.Core.Amqp.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI/bin/Debug/net8.0/Azure.Messaging.ServiceBus.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI/bin/Debug/net8.0/Microsoft.Azure.Amqp.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI/bin/Debug/net8.0/System.ClientModel.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI/bin/Debug/net8.0/Jacko.MessageBus.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI/bin/Debug/net8.0/Jacko.MessageBus.pdb
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI/bin/Debug/net8.0/Dockerfile
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI/bin/Debug/net8.0/RabbitMQ.Client.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI/bin/Debug/net8.0/appsettings.Production.json

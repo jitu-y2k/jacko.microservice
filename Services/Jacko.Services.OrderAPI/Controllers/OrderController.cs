@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Jacko.MessageBus;
 using Jacko.Services.OrderAPI.Data;
 using Jacko.Services.OrderAPI.Models;
 using Jacko.Services.OrderAPI.Models.Dto;
@@ -22,12 +23,16 @@ namespace Jacko.Services.OrderAPI.Controllers
     {
         private readonly AppDbContext _dbContext;
         private readonly IMapper _mapper;
+        private readonly IMessageBus _messageBus;
+        private readonly IConfiguration _configuration;
         protected ResponseDto _response;
 
-        public OrderController(AppDbContext dbContext, IMapper mapper)
+        public OrderController(AppDbContext dbContext, IMapper mapper, IMessageBus messageBus ,IConfiguration configuration)
         {
             _dbContext = dbContext;
             _mapper = mapper;
+            _messageBus = messageBus;
+            _configuration = configuration;
             _response = new ResponseDto();
         }
 
@@ -192,14 +197,26 @@ namespace Jacko.Services.OrderAPI.Controllers
                     orderHeader.PaymentIntentId = paymentIntent.Id;
                     orderHeader.Status = SD.Status_Approved;
                     _dbContext.SaveChanges();
-                    //RewardsDto rewardsDto = new()
-                    //{
-                    //    OrderId = orderHeader.OrderHeaderId,
-                    //    RewardsActivity = Convert.ToInt32(orderHeader.OrderTotal),
-                    //    UserId = orderHeader.UserId
-                    //};
-                    //string topicName = _configuration.GetValue<string>("TopicAndQueueNames:OrderCreatedTopic");
-                    //await _messageBus.PublishMessage(rewardsDto, topicName);
+                    RewardsDto rewardsDto = new()
+                    {
+                        OrderId = orderHeader.OrderHeaderId,
+                        RewardsActivity = Convert.ToInt32(orderHeader.OrderTotal),
+                        UserId = orderHeader.UserId
+                    };
+                    string topicName = _configuration.GetValue<string>("TopicAndQueueNames:OrderCreatedTopic");
+
+                    if (_configuration.GetValue<string>("AsyncCommunicationMode").ToLower() == "rabbitmq")
+                    {
+                        _messageBus.HostName = _configuration.GetValue<string>("RabbitMQServer:Host");
+                        _messageBus.UserName = _configuration.GetValue<string>("RabbitMQServer:UserId");
+                        _messageBus.Password = _configuration.GetValue<string>("RabbitMQServer:Password");
+                    }
+                    else
+                    {
+                        _messageBus.ConnectionString = _configuration.GetValue<string>("ServiceBusConnectionString");
+                    }
+
+                    await _messageBus.PublishMessage(rewardsDto, topicName);
                     _response.Result = _mapper.Map<OrderHeaderDto>(orderHeader);
                 }
 

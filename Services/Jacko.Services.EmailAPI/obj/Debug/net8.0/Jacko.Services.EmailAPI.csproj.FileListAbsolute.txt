@@ -140,3 +140,6 @@
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.EmailAPI/obj/Debug/net8.0/Jacko.Services.EmailAPI.pdb
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.EmailAPI/obj/Debug/net8.0/Jacko.Services.EmailAPI.genruntimeconfig.cache
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.EmailAPI/obj/Debug/net8.0/ref/Jacko.Services.EmailAPI.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.EmailAPI/bin/Debug/net8.0/Dockerfile
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.EmailAPI/bin/Debug/net8.0/RabbitMQ.Client.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.EmailAPI/bin/Debug/net8.0/appsettings.Production.json

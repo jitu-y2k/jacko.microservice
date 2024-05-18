@@ -46,3 +46,4 @@
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Gateway/Jacko.APIGateway/obj/Debug/net8.0/Jacko.APIGateway.pdb
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Gateway/Jacko.APIGateway/obj/Debug/net8.0/Jacko.APIGateway.genruntimeconfig.cache
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Gateway/Jacko.APIGateway/obj/Debug/net8.0/ref/Jacko.APIGateway.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Gateway/Jacko.APIGateway/bin/Debug/net8.0/ocelot.production.json

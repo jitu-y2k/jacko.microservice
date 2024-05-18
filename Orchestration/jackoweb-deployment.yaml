@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jacko-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jacko-web
+  template:
+    metadata:
+      labels:
+        app: jacko-web
+    spec:
+      containers:
+        - name: jacko-web
+          image: jituy2k/jacko.web:latest
+          ports:
+            - containerPort: 8080
+

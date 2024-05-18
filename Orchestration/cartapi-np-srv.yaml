@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cart-np-srv
+spec:
+  type: NodePort
+  selector:
+    app: jacko-cart-service
+  ports:
+    - name: jacko-cart-service
+      protocol: TCP
+      port: 8080
+      targetPort: 8080

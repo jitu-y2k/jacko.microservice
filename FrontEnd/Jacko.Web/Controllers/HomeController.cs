@@ -34,7 +34,7 @@ public class HomeController : Controller
         return View(productList);
     }
 
-    //[Authorize]
+    [Authorize]
     public async Task<IActionResult> ProductDetails(int productId)
     {
         ProductDto? model = new();
@@ -53,9 +53,10 @@ public class HomeController : Controller
         return View(model);
     }
 
-    //[Authorize]
+    
     [HttpPost]
     [ActionName("ProductDetails")]
+    [Authorize]
     public async Task<IActionResult> ProductDetails(ProductDto productDto)
     {
         CartDto cartDto = new CartDto()

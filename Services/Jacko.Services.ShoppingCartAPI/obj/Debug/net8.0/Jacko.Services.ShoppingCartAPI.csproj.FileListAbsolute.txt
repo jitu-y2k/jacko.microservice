@@ -145,3 +145,5 @@
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.ShoppingCartAPI/obj/Debug/net8.0/Jacko.Services.ShoppingCartAPI.pdb
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.ShoppingCartAPI/obj/Debug/net8.0/Jacko.Services.ShoppingCartAPI.genruntimeconfig.cache
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.ShoppingCartAPI/obj/Debug/net8.0/ref/Jacko.Services.ShoppingCartAPI.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.ShoppingCartAPI/bin/Debug/net8.0/appsettings.Production.json
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.ShoppingCartAPI/bin/Debug/net8.0/RabbitMQ.Client.dll

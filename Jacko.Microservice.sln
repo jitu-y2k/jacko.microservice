@@ -25,13 +25,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jacko.Services.RewardAPI", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jacko.Services.EmailAPI", "Services\Jacko.Services.EmailAPI\Jacko.Services.EmailAPI.csproj", "{3A70903A-83E3-4CDB-A939-6BC77802925A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Intgegration", "Intgegration", "{0039FF79-47A4-49E7-A064-20A4590291BD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{0039FF79-47A4-49E7-A064-20A4590291BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jacko.MessageBus", "Integration\MessageBus\Jacko.MessageBus.csproj", "{B71F9D22-5829-4D74-8BCF-A7EFE9A6A9E9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{A4912989-60EF-4AC1-B7C0-0671F95EDE49}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jacko.APIGateway", "Gateway\Jacko.APIGateway\Jacko.APIGateway.csproj", "{FF33E261-6F73-48E2-BF43-87AD0BD6A42B}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1A972F5C-46C0-4533-862C-20A67AC09DC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,6 +88,10 @@ Global
 		{FF33E261-6F73-48E2-BF43-87AD0BD6A42B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF33E261-6F73-48E2-BF43-87AD0BD6A42B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF33E261-6F73-48E2-BF43-87AD0BD6A42B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A972F5C-46C0-4533-862C-20A67AC09DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A972F5C-46C0-4533-862C-20A67AC09DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A972F5C-46C0-4533-862C-20A67AC09DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A972F5C-46C0-4533-862C-20A67AC09DC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8553BE1A-BD9F-4C84-B8D1-D161D05CCE4B} = {93E83C22-8EFD-492C-B3D2-5439EF5CF7D2}

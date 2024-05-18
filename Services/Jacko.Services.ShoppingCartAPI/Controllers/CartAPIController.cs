@@ -112,6 +112,17 @@ namespace Jacko.Services.ShoppingCartAPI.Controllers
         {
             try
             {
+                if (_configuration.GetValue<string>("AsyncCommunicationMode").ToLower() == "rabbitmq")
+                {
+                    _messageBus.HostName = _configuration.GetValue<string>("RabbitMQServer:Host");
+                    _messageBus.UserName = _configuration.GetValue<string>("RabbitMQServer:UserId");
+                    _messageBus.Password = _configuration.GetValue<string>("RabbitMQServer:Password");
+                }
+                else
+                {
+                    _messageBus.ConnectionString = _configuration.GetValue<string>("ServiceBusConnectionString");
+                }
+                
                 await _messageBus.PublishMessage(cartDto, _configuration.GetValue<string>("TopicAndQueueNames:EmailShoppingCartQueue"));
                 _response.Result = true;
             }
@@ -208,6 +219,30 @@ namespace Jacko.Services.ShoppingCartAPI.Controllers
             return _response;
         }
 
+        [HttpGet("EmptyCart/{userId}")]
+        public async Task<ResponseDto> EmptyCart(string userId)
+        {
+            try
+            {
+
+                CartHeader cartHeader = _db.CartHeaders.First(u => u.UserId == userId);
+
+                var cartDetailsList = _db.CartDetails.Where(d => d.CartHeaderId == cartHeader.CartHeaderId).ToList();
+
+                cartDetailsList.ForEach(d => _db.CartDetails.Remove(d));
+
+                _db.Entry(cartHeader).State = EntityState.Deleted;
+                
+               await _db.SaveChangesAsync();
+
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
+        }
     }
 }
 

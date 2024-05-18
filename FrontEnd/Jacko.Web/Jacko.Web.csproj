@@ -4,10 +4,13 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <DockerComposeProjectPath>../../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>5709eb7c-5cc3-4d59-8950-e6667ebdc002</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.4" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
@@ -18,11 +21,15 @@
     <None Remove="Utility\" />
     <None Remove="Views\Auth\" />
     <None Remove="Views\Cart\" />
+    <None Remove="Views\Product\" />
+    <None Remove="Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Coupon\" />
     <Folder Include="Utility\" />
     <Folder Include="Views\Auth\" />
     <Folder Include="Views\Cart\" />
+    <Folder Include="Views\Product\" />
+    <Folder Include="Views\Order\" />
   </ItemGroup>
 </Project>

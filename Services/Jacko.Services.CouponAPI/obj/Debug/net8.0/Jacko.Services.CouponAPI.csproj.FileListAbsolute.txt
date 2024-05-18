@@ -146,3 +146,6 @@
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.CouponAPI/obj/Debug/net8.0/Jacko.Services.CouponAPI.pdb
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.CouponAPI/obj/Debug/net8.0/Jacko.Services.CouponAPI.genruntimeconfig.cache
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.CouponAPI/obj/Debug/net8.0/ref/Jacko.Services.CouponAPI.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.CouponAPI/bin/Debug/net8.0/appsettings.Production.json
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.CouponAPI/bin/Debug/net8.0/Dockerfile
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.CouponAPI/bin/Debug/net8.0/Dockerfile (copy)

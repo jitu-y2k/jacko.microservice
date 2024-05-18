@@ -33,6 +33,15 @@ namespace Jacko.Web.Service
             });
         }
 
+        public async Task<ResponseDto?> EmptyUserCart(string userId)
+        {
+            return await _baseService.SendAsync(new RequestDto()
+            {
+                ApiType = SD.ApiType.GET,
+                Url = SD.ShoppingCartAPIBase + "/api/cart/EmptyCart/" + userId
+            });
+        }
+
         public async Task<ResponseDto?> GetCartByUserIdAsnyc(string userId)
         {
             return await _baseService.SendAsync(new RequestDto()

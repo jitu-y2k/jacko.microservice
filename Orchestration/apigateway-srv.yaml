@@ -1,0 +1,163 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: api-gateway-srv
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+spec:
+  rules:
+    - host: jacko.com
+      http:
+        paths:
+          - path: /api/Auth/login
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-auth-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/Auth/register
+            pathType: Prefix
+            backend: 
+              service:
+                name: jacko-auth-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/Auth/AssignRole
+            pathType: Prefix
+            backend: 
+              service:
+                name: jacko-auth-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/product
+            pathType: Prefix
+            backend: 
+              service:
+                name: jacko-product-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /swagger
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-product-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/cart/GetCart
+            pathType: Prefix
+            backend: 
+              service:
+                name: jacko-cart-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/cart/EmailCartRequest
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-cart-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/cart/ApplyCoupon
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-cart-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/cart/CartUpsert
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-cart-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/cart/RemoveCart
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-cart-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/cart/EmptyCart
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-cart-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/Order/GetOrders
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-order-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/Order/GetOrder
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-order-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/Order/CreateOrder
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-order-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/Order/CreateStripeSession
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-order-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/Order/ValidateStripeSession
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-order-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/Order/UpdateOrderStatus
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-order-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/Coupon
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-coupon-clusterip-srv
+                port:
+                  number: 8080
+
+          - path: /api/Coupon/GetByCode
+            pathType: Prefix
+            backend:
+              service:
+                name: jacko-coupon-clusterip-srv
+                port:
+                  number: 8080

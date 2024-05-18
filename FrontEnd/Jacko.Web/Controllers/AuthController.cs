@@ -10,6 +10,7 @@ using Jacko.Web.Utility;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 
 
@@ -31,6 +32,13 @@ namespace Jacko.Web.Controllers
         // GET: /<controller>/
         public IActionResult Register()
         {
+            var roleList = new List<SelectListItem>()
+            {
+                new SelectListItem{Text=SD.RoleAdmin,Value=SD.RoleAdmin},
+                new SelectListItem{Text=SD.RoleCustomer,Value=SD.RoleCustomer},
+            };
+
+            ViewBag.RoleList = roleList;
             return View();
         }
 
@@ -84,8 +92,7 @@ namespace Jacko.Web.Controllers
 
                 await SignInUser(loginResponseDto.Token);
                 _tokenProvider.SetToken(loginResponseDto.Token);
-
-                SignInUser(loginResponseDto.Token);
+                
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -110,17 +117,18 @@ namespace Jacko.Web.Controllers
 
             identity.AddClaim(new Claim(ClaimTypes.Name, jwtTokenInfo.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Email).Value));
 
-            var roles = jwtTokenInfo.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role);
+            var roles = jwtTokenInfo.Claims.FirstOrDefault(c => c.Type == "role");
 
             if (roles != null)
             {
-                identity.AddClaim(new Claim(ClaimTypes.Role, jwtTokenInfo.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role).Value));
+                identity.AddClaim(new Claim(ClaimTypes.Role, jwtTokenInfo.Claims.FirstOrDefault(c => c.Type == "role").Value));
             }
 
             var principal = new ClaimsPrincipal(identity);
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
         }
 
+        [HttpGet]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();

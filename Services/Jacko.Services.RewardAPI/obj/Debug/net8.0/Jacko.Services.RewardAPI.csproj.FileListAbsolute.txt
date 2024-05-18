@@ -5,12 +5,9 @@
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/Jacko.Services.RewardAPI.runtimeconfig.json
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/Jacko.Services.RewardAPI.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/Jacko.Services.RewardAPI.pdb
-/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/AutoMapper.dll
-/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/Azure.Core.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/Azure.Identity.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/Humanizer.dll
-/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/Microsoft.CodeAnalysis.dll
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.dll
@@ -138,3 +135,10 @@
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/obj/Debug/net8.0/Jacko.Services.RewardAPI.pdb
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/obj/Debug/net8.0/Jacko.Services.RewardAPI.genruntimeconfig.cache
 /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/obj/Debug/net8.0/ref/Jacko.Services.RewardAPI.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/Azure.Core.Amqp.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/Azure.Messaging.ServiceBus.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/Microsoft.Azure.Amqp.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/System.ClientModel.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/RabbitMQ.Client.dll
+/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI/bin/Debug/net8.0/appsettings.Production.json

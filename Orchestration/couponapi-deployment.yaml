@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jacko-coupon-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jacko-coupon-service
+  template:
+    metadata:
+      labels:
+        app: jacko-coupon-service
+    spec:
+      containers:
+        - name: jacko-coupon-service
+          image: jituy2k/coupon-service:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jacko-coupon-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: jacko-coupon-service
+  ports:
+  - name: jacko-coupon-service
+    protocol: TCP
+    port: 8080
+    targetPort: 8080
+

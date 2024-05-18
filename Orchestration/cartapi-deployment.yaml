@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jacko-cart-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jacko-cart-service
+  template:
+    metadata:
+      labels:
+        app: jacko-cart-service
+    spec:
+      containers:
+        - name: jacko-cart-service
+          image: jituy2k/cart-service:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jacko-cart-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: jacko-cart-service
+  ports:
+  - name: jacko-cart-service
+    protocol: TCP
+    port: 8080
+    targetPort: 8080
+

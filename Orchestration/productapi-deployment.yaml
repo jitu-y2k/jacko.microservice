@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jacko-product-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jacko-product-service
+  template:
+    metadata:
+      labels:
+        app: jacko-product-service
+    spec:
+      containers:
+        - name: jacko-product-service
+          image: jituy2k/product-service:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jacko-product-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: jacko-product-service
+  ports:
+  - name: jacko-product-service
+    protocol: TCP
+    port: 8080
+    targetPort: 8080

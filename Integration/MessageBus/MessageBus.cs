@@ -7,11 +7,20 @@ namespace Jacko.MessageBus;
 public class MessageBus : IMessageBus
 {
 
-    private readonly string connectionString = "<Your Azure Service Bus Connection String>";
+    //private readonly string connectionString = "<Your Azure Service Bus Connection String>";
+
+    public string? ConnectionString { get; set; } = "";
+    public string? HostName { get; set; } = ""; 
+    public string? UserName { get; set; } = "";
+    public string? Password { get; set; } = "";
 
     public async Task PublishMessage(object message, string topic_queue_name)
     {
-        await using var client = new ServiceBusClient(connectionString);
+        if (ConnectionString == "")
+        {
+            throw new Exception("Connection string is not provided for Azure service Bus");
+        }
+        await using var client = new ServiceBusClient(ConnectionString);
 
         ServiceBusSender sender = client.CreateSender(topic_queue_name);
 
