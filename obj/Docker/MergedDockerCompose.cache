@@ -1,0 +1,176 @@
+name: dockercompose7545382481938796005
+services:
+  jacko.services.authapi:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: Services/Jacko.Services.AuthAPI/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: jituy2k/auth-service:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /Users/jitendrasharma/.aspnet/https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.microsoft/usersecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+  jacko.services.couponapi:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: Services/Jacko.Services.CouponAPI/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: jituy2k/coupon-service:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /Users/jitendrasharma/.aspnet/https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.microsoft/usersecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+  jacko.services.emailapi:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: Services/Jacko.Services.EmailAPI/Dockerfile
+    image: jituy2k/email-service:latest
+    networks:
+      default: null
+  jacko.services.orderapi:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: Services/Jacko.Services.OrderAPI/Dockerfile
+    image: jituy2k/order-service:latest
+    networks:
+      default: null
+  jacko.services.productapi:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: Services/Jacko.Services.ProductAPI/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: jituy2k/product-service:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /Users/jitendrasharma/.aspnet/https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.microsoft/usersecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+  jacko.services.rewardapi:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: Services/Jacko.Services.RewardAPI/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: jituy2k/reward-service:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /Users/jitendrasharma/.aspnet/https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.microsoft/usersecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+  jacko.services.shoppingcartapi:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: Services/Jacko.Services.ShoppingCartAPI/Dockerfile
+    image: jituy2k/cart-service:latest
+    networks:
+      default: null
+  jacko.web:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: FrontEnd/Jacko.Web/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: jituy2k/jacko-frontend:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /Users/jitendrasharma/.aspnet/https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.microsoft/usersecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+networks:
+  default:
+    name: dockercompose7545382481938796005_default

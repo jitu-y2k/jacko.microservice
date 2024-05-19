@@ -23,16 +23,6 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICouponService, CouponService>();
 
-if (builder.Configuration["AsyncCommunicationMode"].ToLower() == "rabbitmq")
-{
-    builder.Services.AddScoped<IMessageBus, RabbitMQMessageBus>();
-}
-else
-{
-    builder.Services.AddScoped<IMessageBus, MessageBus>();
-}
-
-
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<BackEndAPIAuthenticationClientHandler>();
 
@@ -45,6 +35,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.AddAsyncCommunicationService();
 
 builder.AddAppAuthentication();
 builder.Services.AddAuthorization();

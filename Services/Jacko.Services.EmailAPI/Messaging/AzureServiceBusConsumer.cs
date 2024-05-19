@@ -25,7 +25,8 @@ namespace Jacko.Services.EmailAPI.Messaging
 		{
             _configuration = configuration;
             _emailService = emailService;
-            serviceBusConnectionString = _configuration.GetValue<string>("ServiceBusConnectionString");
+            var platform = _configuration["AsyncCommunicationConfig:Platform"] ?? "";
+            serviceBusConnectionString = _configuration.GetValue<string>($"{platform}:ConnectionString")??"";
 
             emailCartQueue = _configuration.GetValue<string>("TopicAndQueueNames:EmailShoppingCartQueue");
             registerUserQueue = _configuration.GetValue<string>("TopicAndQueueNames:RegisterUserQueue");

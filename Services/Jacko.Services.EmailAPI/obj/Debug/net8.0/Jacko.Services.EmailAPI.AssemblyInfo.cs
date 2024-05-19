@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jacko.Services.EmailAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+713275a38659bce7f41bb8d8b60b8e94e684ab01")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80b450b7d29b470b8670071d344e82ad8bf8898f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jacko.Services.EmailAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jacko.Services.EmailAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

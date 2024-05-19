@@ -1,0 +1,209 @@
+version: '3.4'
+
+services:
+  jacko.services.authapi:
+    image: jituy2k/auth-service:dev
+    container_name: Jacko.Services.AuthAPI
+    build:
+      target: build
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Jacko.Services.AuthAPI"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.AuthAPI:/app
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice:/src
+      - /Users/jitendrasharma/vsdbg/vs2017u5:/remote_debugger:rw
+      - /Users/jitendrasharma/.nuget/packages/:/root/.nuget/packages:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/net8.0/Jacko.Services.AuthAPI.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+  jacko.services.couponapi:
+    image: jituy2k/coupon-service:dev
+    container_name: Jacko.Services.CouponAPI
+    build:
+      target: build
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Jacko.Services.CouponAPI"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.CouponAPI:/app
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice:/src
+      - /Users/jitendrasharma/vsdbg/vs2017u5:/remote_debugger:rw
+      - /Users/jitendrasharma/.nuget/packages/:/root/.nuget/packages:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/net8.0/Jacko.Services.CouponAPI.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  jacko.services.emailapi:
+    image: jituy2k/email-service:dev
+    container_name: Jacko.Services.EmailAPI
+    build:
+      target: build
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Jacko.Services.EmailAPI"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.EmailAPI:/app
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice:/src
+      - /Users/jitendrasharma/vsdbg/vs2017u5:/remote_debugger:rw
+      - /Users/jitendrasharma/.nuget/packages/:/root/.nuget/packages:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/net8.0/Jacko.Services.EmailAPI.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  jacko.services.orderapi:
+    image: jituy2k/order-service:dev
+    container_name: Jacko.Services.OrderAPI
+    build:
+      target: build
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Jacko.Services.OrderAPI"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI:/app
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice:/src
+      - /Users/jitendrasharma/vsdbg/vs2017u5:/remote_debugger:rw
+      - /Users/jitendrasharma/.nuget/packages/:/root/.nuget/packages:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/net8.0/Jacko.Services.OrderAPI.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  jacko.services.productapi:
+    image: jituy2k/product-service:dev
+    container_name: Jacko.Services.ProductAPI
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Jacko.Services.ProductAPI"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.ProductAPI:/app
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice:/src
+      - /Users/jitendrasharma/vsdbg/vs2017u5:/remote_debugger:rw
+      - /Users/jitendrasharma/.nuget/packages/:/root/.nuget/packages:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/net8.0/Jacko.Services.ProductAPI.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  jacko.services.rewardapi:
+    image: jituy2k/reward-service:dev
+    container_name: Jacko.Services.RewardAPI
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Jacko.Services.RewardAPI"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI:/app
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice:/src
+      - /Users/jitendrasharma/vsdbg/vs2017u5:/remote_debugger:rw
+      - /Users/jitendrasharma/.nuget/packages/:/root/.nuget/packages:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/net8.0/Jacko.Services.RewardAPI.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  jacko.services.shoppingcartapi:
+    image: jituy2k/cart-service:dev
+    container_name: Jacko.Services.ShoppingCartAPI
+    build:
+      target: build
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Jacko.Services.ShoppingCartAPI"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.ShoppingCartAPI:/app
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice:/src
+      - /Users/jitendrasharma/vsdbg/vs2017u5:/remote_debugger:rw
+      - /Users/jitendrasharma/.nuget/packages/:/root/.nuget/packages:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/net8.0/Jacko.Services.ShoppingCartAPI.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  jacko.web:
+    image: jituy2k/jacko-frontend:dev
+    container_name: Jacko.Web
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Jacko.Web"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web:/app
+      - /Users/jitendrasharma/Projects/microservices/jacko.microservice:/src
+      - /Users/jitendrasharma/vsdbg/vs2017u5:/remote_debugger:rw
+      - /Users/jitendrasharma/.nuget/packages/:/root/.nuget/packages:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/net8.0/Jacko.Web.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true

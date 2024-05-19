@@ -8,22 +8,22 @@ namespace Jacko.MessageBus
 {
 	public class RabbitMQMessageBus: IMessageBus
 	{
-        //private readonly string _hostName;
-        //private readonly string _password;
-        //private readonly string _username;
+        private readonly string _hostName;
+        private readonly string _password;
+        private readonly string _username;
         private IConnection? _connection=null;
 
-        public string? ConnectionString { get; set; }
-        public string? HostName { get; set; }
-        public string? UserName { get; set; }
-        public string? Password { get; set; }
+        //public string? ConnectionString { get; set; }
+        //public string? HostName { get; set; }
+        //public string? UserName { get; set; }
+        //public string? Password { get; set; }
 
-        //public RabbitMQMessageBus()
-        //{
-        //    _hostName = "localhost";
-        //    _password = "guest";
-        //    _username = "guest";
-        //}
+        public RabbitMQMessageBus(string hostName, string username, string password)
+        {
+            _hostName = hostName;
+            _password = password;
+            _username = username;
+        }
 
         public async Task PublishMessage(object baseMessage, string queueName)
         {
@@ -47,16 +47,16 @@ namespace Jacko.MessageBus
         {
             try
             {
-                if (HostName =="" || UserName=="" || Password=="")
+                if (_hostName =="" || _username=="" || _password=="")
                 {
                     throw new Exception("RabbitMQ conectivity information is not set");
                 }
 
                 var factory = new ConnectionFactory()
                 {
-                    HostName = HostName,
-                    Password = Password,
-                    UserName = UserName
+                    HostName = _hostName,
+                    Password = _password,
+                    UserName = _username
                 };
 
                 _connection = factory.CreateConnection();

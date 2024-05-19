@@ -22,11 +22,13 @@ namespace Jacko.Services.EmailAPI.Messaging
         {
             _emailService = emailService;
             _configuration = configuration;
+            var platform = _configuration["AsyncCommunicationConfig:Platform"] ?? "";
+
             var factory = new ConnectionFactory()
             {
-                HostName = _configuration.GetValue<string>("RabbitMQServer:Host"),
-                Password = _configuration.GetValue<string>("RabbitMQServer:Password"),
-                UserName = _configuration.GetValue<string>("RabbitMQServer:UserId")
+                HostName = _configuration.GetValue<string>($"{platform}:Host"),
+                Password = _configuration.GetValue<string>($"{platform}:Password"),
+                UserName = _configuration.GetValue<string>($"{platform}:UserId")
             };
             _queueName = _configuration.GetValue<string>("TopicAndQueueNames:EmailShoppingCartQueue");
             _connection = factory.CreateConnection();

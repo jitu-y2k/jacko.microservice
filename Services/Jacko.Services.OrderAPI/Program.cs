@@ -27,14 +27,14 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<BackEndAPIAuthenticationClientHandler>();
 
 
-if (builder.Configuration["AsyncCommunicationMode"].ToLower() == "rabbitmq")
-{
-    builder.Services.AddScoped<IMessageBus, RabbitMQMessageBus>();
-}
-else
-{
-    builder.Services.AddScoped<IMessageBus, MessageBus>();
-}
+//if (builder.Configuration["AsyncCommunicationMode"].ToLower() == "rabbitmq")
+//{
+//    builder.Services.AddScoped<IMessageBus, RabbitMQMessageBus>();
+//}
+//else
+//{
+//    builder.Services.AddScoped<IMessageBus, MessageBus>();
+//}
 
 builder.Services.AddHttpClient("Product", u => u.BaseAddress =
 new Uri(builder.Configuration["ServiceUrls:ProductAPI"])).AddHttpMessageHandler<BackEndAPIAuthenticationClientHandler>();
@@ -45,6 +45,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.AddAsyncCommunicationService();
 
 builder.AddAppAuthentication();
 builder.Services.AddAuthorization();

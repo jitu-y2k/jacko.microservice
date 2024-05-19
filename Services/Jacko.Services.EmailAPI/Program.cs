@@ -16,14 +16,15 @@ var optionBuilder = new DbContextOptionsBuilder<AppDbContext>();
 optionBuilder.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 builder.Services.AddSingleton(new EmailService(optionBuilder.Options));
 
-if (builder.Configuration.GetValue<string>("AsyncCommunicationMode").ToLower() == "rabbitmq")
-{
-    builder.Services.AddHostedService<RabbitMQEmailConsumer>();
-}
-else
-{
-    builder.Services.AddSingleton<IAzureServiceBusConsumer, AzureServiceBusConsumer>();
-}
+builder.AddAsyncCommunicationService();
+//if (builder.Configuration.GetValue<string>("AsyncCommunicationMode").ToLower() == "rabbitmq")
+//{
+//    builder.Services.AddHostedService<RabbitMQEmailConsumer>();
+//}
+//else
+//{
+//    builder.Services.AddSingleton<IAzureServiceBusConsumer, AzureServiceBusConsumer>();
+//}
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -47,7 +48,7 @@ app.MapControllers();
 
 ApplyMigration();
 
-if (app.Configuration.GetValue<string>("AsyncCommunicationMode").ToLower() != "rabbitmq") {
+if (app.Configuration.GetValue<string>("AsyncCommunicationConfig:Platform").ToLower() == "azureservicebus") {
 
     app.UseAzureServiceBusConsumer();
 }

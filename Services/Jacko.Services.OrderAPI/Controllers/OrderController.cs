@@ -205,17 +205,6 @@ namespace Jacko.Services.OrderAPI.Controllers
                     };
                     string topicName = _configuration.GetValue<string>("TopicAndQueueNames:OrderCreatedTopic");
 
-                    if (_configuration.GetValue<string>("AsyncCommunicationMode").ToLower() == "rabbitmq")
-                    {
-                        _messageBus.HostName = _configuration.GetValue<string>("RabbitMQServer:Host");
-                        _messageBus.UserName = _configuration.GetValue<string>("RabbitMQServer:UserId");
-                        _messageBus.Password = _configuration.GetValue<string>("RabbitMQServer:Password");
-                    }
-                    else
-                    {
-                        _messageBus.ConnectionString = _configuration.GetValue<string>("ServiceBusConnectionString");
-                    }
-
                     await _messageBus.PublishMessage(rewardsDto, topicName);
                     _response.Result = _mapper.Map<OrderHeaderDto>(orderHeader);
                 }

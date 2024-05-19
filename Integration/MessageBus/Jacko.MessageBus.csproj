@@ -10,5 +10,6 @@
     <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.17.5" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
+    <PackageReference Include="Confluent.Kafka" Version="2.4.0" />
   </ItemGroup>
 </Project>

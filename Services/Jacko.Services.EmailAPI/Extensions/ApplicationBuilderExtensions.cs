@@ -32,6 +32,29 @@ namespace Jacko.Services.EmailAPI.Extensions
             Console.WriteLine("Email Service Stopped ");
         }
 
+        public static WebApplicationBuilder AddAsyncCommunicationService(this WebApplicationBuilder builder)
+        {
+            var platform = builder.Configuration["AsyncCommunicationConfig:Platform"] ?? "";
+
+            switch (platform.ToLower())
+            {
+                case "rabbitmq":
+
+                    builder.Services.AddHostedService<RabbitMQEmailConsumer>();
+                    break;
+                case "azureservicebus":
+                    builder.Services.AddSingleton<IAzureServiceBusConsumer, AzureServiceBusConsumer>();
+                    break;
+                case "kafka":
+                    builder.Services.AddHostedService<KafkaMQEmailConsumer>();
+                    break;
+                default:
+                    Console.WriteLine("No platform configured for Async communication");
+                    break;
+            }
+            return builder;
+        }
+
     }
 
     

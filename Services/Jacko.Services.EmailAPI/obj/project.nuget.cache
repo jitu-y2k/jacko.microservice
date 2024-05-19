@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yKMzQCmAIgv/u+t56NXucj3jlzIGu7vcT3RNcx1VKiJ/j6koUiNcXDpzXjF3up5fDmbdgMq7eOG4YW5ixieF7Q==",
+  "dgSpecHash": "3FjxwOAriwbvHs/kMFDxhYzGIO8CHnABuOjhONWo4anRrj/dJ1tGYH5qkHG430yg/MXNm2nP2uGZW4VJ1e3AyQ==",
   "success": true,
   "projectFilePath": "/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.EmailAPI/Jacko.Services.EmailAPI.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,9 @@
     "/Users/jitendrasharma/.nuget/packages/azure.core.amqp/1.3.0/azure.core.amqp.1.3.0.nupkg.sha512",
     "/Users/jitendrasharma/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
     "/Users/jitendrasharma/.nuget/packages/azure.messaging.servicebus/7.17.5/azure.messaging.servicebus.7.17.5.nupkg.sha512",
+    "/Users/jitendrasharma/.nuget/packages/confluent.kafka/2.4.0/confluent.kafka.2.4.0.nupkg.sha512",
     "/Users/jitendrasharma/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/jitendrasharma/.nuget/packages/librdkafka.redist/2.4.0/librdkafka.redist.2.4.0.nupkg.sha512",
     "/Users/jitendrasharma/.nuget/packages/microsoft.azure.amqp/2.6.5/microsoft.azure.amqp.2.6.5.nupkg.sha512",
     "/Users/jitendrasharma/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/Users/jitendrasharma/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3/microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",

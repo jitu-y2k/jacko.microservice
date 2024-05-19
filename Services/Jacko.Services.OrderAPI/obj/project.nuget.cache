@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dUs4zWnFUMZKg9yAfRghx1HdqqePqbSI2BHVnAJEir4xx+sWOpQ9Nx/N7khQ2x0ljJ2GcQ2ujZkztDdUg3AxqQ==",
+  "dgSpecHash": "kUBq8UN03tKS1bgYcoNoAUKXLgw8n4hFbn21qPnUgbuSkAxEsLcCJYyCCOXmi39hCZPPc3cHu1VYQi537fnwkg==",
   "success": true,
   "projectFilePath": "/Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI/Jacko.Services.OrderAPI.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,9 @@
     "/Users/jitendrasharma/.nuget/packages/azure.core.amqp/1.3.0/azure.core.amqp.1.3.0.nupkg.sha512",
     "/Users/jitendrasharma/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
     "/Users/jitendrasharma/.nuget/packages/azure.messaging.servicebus/7.17.5/azure.messaging.servicebus.7.17.5.nupkg.sha512",
+    "/Users/jitendrasharma/.nuget/packages/confluent.kafka/2.4.0/confluent.kafka.2.4.0.nupkg.sha512",
     "/Users/jitendrasharma/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/jitendrasharma/.nuget/packages/librdkafka.redist/2.4.0/librdkafka.redist.2.4.0.nupkg.sha512",
     "/Users/jitendrasharma/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.4/microsoft.aspnetcore.authentication.jwtbearer.8.0.4.nupkg.sha512",
     "/Users/jitendrasharma/.nuget/packages/microsoft.azure.amqp/2.6.5/microsoft.azure.amqp.2.6.5.nupkg.sha512",
     "/Users/jitendrasharma/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
