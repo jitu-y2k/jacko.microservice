@@ -13,7 +13,6 @@ services:
       context: .
       dockerfile: Services/Jacko.Services.ProductAPI/Dockerfile
 
-
   jacko.web:
     image: ${DOCKER_REGISTRY-}/jacko-frontend:latest
     build:

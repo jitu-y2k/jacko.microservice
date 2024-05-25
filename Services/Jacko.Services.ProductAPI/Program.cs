@@ -42,7 +42,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-ApplyMigration();
+//ApplyMigration();
 
 app.Run();
 
@@ -58,3 +58,5 @@ void ApplyMigration()
         }
     }
 }
+
+public partial class Program { }

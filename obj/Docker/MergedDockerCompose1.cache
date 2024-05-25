@@ -1,0 +1,494 @@
+name: dockercompose7545382481938796005
+services:
+  jacko.services.authapi:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: Services/Jacko.Services.AuthAPI/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Jacko.Services.AuthAPI
+      target: build
+    container_name: Jacko.Services.AuthAPI
+    entrypoint:
+      - tail
+      - -f
+      - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: jituy2k/auth-service:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net8.0/Jacko.Services.AuthAPI.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        protocol: tcp
+    tty: true
+    volumes:
+      - type: bind
+        source: /Users/jitendrasharma/.aspnet/https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.microsoft/usersecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.AuthAPI
+        target: /app
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+        target: /src
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/vsdbg/vs2017u5
+        target: /remote_debugger
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.nuget/packages/
+        target: /root/.nuget/packages
+        read_only: true
+        bind:
+          create_host_path: true
+  jacko.services.couponapi:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: Services/Jacko.Services.CouponAPI/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Jacko.Services.CouponAPI
+      target: build
+    container_name: Jacko.Services.CouponAPI
+    entrypoint:
+      - tail
+      - -f
+      - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: jituy2k/coupon-service:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net8.0/Jacko.Services.CouponAPI.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        protocol: tcp
+    tty: true
+    volumes:
+      - type: bind
+        source: /Users/jitendrasharma/.aspnet/https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.microsoft/usersecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.CouponAPI
+        target: /app
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+        target: /src
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/vsdbg/vs2017u5
+        target: /remote_debugger
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.nuget/packages/
+        target: /root/.nuget/packages
+        read_only: true
+        bind:
+          create_host_path: true
+  jacko.services.emailapi:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: Services/Jacko.Services.EmailAPI/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Jacko.Services.EmailAPI
+      target: build
+    container_name: Jacko.Services.EmailAPI
+    entrypoint:
+      - tail
+      - -f
+      - /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: jituy2k/email-service:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net8.0/Jacko.Services.EmailAPI.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    tty: true
+    volumes:
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.EmailAPI
+        target: /app
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+        target: /src
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/vsdbg/vs2017u5
+        target: /remote_debugger
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.nuget/packages/
+        target: /root/.nuget/packages
+        read_only: true
+        bind:
+          create_host_path: true
+  jacko.services.orderapi:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: Services/Jacko.Services.OrderAPI/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Jacko.Services.OrderAPI
+      target: build
+    container_name: Jacko.Services.OrderAPI
+    entrypoint:
+      - tail
+      - -f
+      - /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: jituy2k/order-service:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net8.0/Jacko.Services.OrderAPI.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    tty: true
+    volumes:
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.OrderAPI
+        target: /app
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+        target: /src
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/vsdbg/vs2017u5
+        target: /remote_debugger
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.nuget/packages/
+        target: /root/.nuget/packages
+        read_only: true
+        bind:
+          create_host_path: true
+  jacko.services.productapi:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: Services/Jacko.Services.ProductAPI/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Jacko.Services.ProductAPI
+      target: base
+    container_name: Jacko.Services.ProductAPI
+    entrypoint:
+      - tail
+      - -f
+      - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: jituy2k/product-service:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net8.0/Jacko.Services.ProductAPI.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        protocol: tcp
+    tty: true
+    volumes:
+      - type: bind
+        source: /Users/jitendrasharma/.aspnet/https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.microsoft/usersecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.ProductAPI
+        target: /app
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+        target: /src
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/vsdbg/vs2017u5
+        target: /remote_debugger
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.nuget/packages/
+        target: /root/.nuget/packages
+        read_only: true
+        bind:
+          create_host_path: true
+  jacko.services.rewardapi:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: Services/Jacko.Services.RewardAPI/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Jacko.Services.RewardAPI
+      target: base
+    container_name: Jacko.Services.RewardAPI
+    entrypoint:
+      - tail
+      - -f
+      - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: jituy2k/reward-service:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net8.0/Jacko.Services.RewardAPI.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        protocol: tcp
+    tty: true
+    volumes:
+      - type: bind
+        source: /Users/jitendrasharma/.aspnet/https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.microsoft/usersecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.RewardAPI
+        target: /app
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+        target: /src
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/vsdbg/vs2017u5
+        target: /remote_debugger
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.nuget/packages/
+        target: /root/.nuget/packages
+        read_only: true
+        bind:
+          create_host_path: true
+  jacko.services.shoppingcartapi:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: Services/Jacko.Services.ShoppingCartAPI/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Jacko.Services.ShoppingCartAPI
+      target: build
+    container_name: Jacko.Services.ShoppingCartAPI
+    entrypoint:
+      - tail
+      - -f
+      - /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: jituy2k/cart-service:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net8.0/Jacko.Services.ShoppingCartAPI.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    tty: true
+    volumes:
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice/Services/Jacko.Services.ShoppingCartAPI
+        target: /app
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+        target: /src
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/vsdbg/vs2017u5
+        target: /remote_debugger
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.nuget/packages/
+        target: /root/.nuget/packages
+        read_only: true
+        bind:
+          create_host_path: true
+  jacko.web:
+    build:
+      context: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+      dockerfile: FrontEnd/Jacko.Web/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Jacko.Web
+      target: base
+    container_name: Jacko.Web
+    entrypoint:
+      - tail
+      - -f
+      - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: jituy2k/jacko-frontend:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net8.0/Jacko.Web.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        protocol: tcp
+    tty: true
+    volumes:
+      - type: bind
+        source: /Users/jitendrasharma/.aspnet/https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.microsoft/usersecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice/FrontEnd/Jacko.Web
+        target: /app
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/Projects/microservices/jacko.microservice
+        target: /src
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/vsdbg/vs2017u5
+        target: /remote_debugger
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/jitendrasharma/.nuget/packages/
+        target: /root/.nuget/packages
+        read_only: true
+        bind:
+          create_host_path: true
+networks:
+  default:
+    name: dockercompose7545382481938796005_default

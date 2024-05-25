@@ -12,8 +12,8 @@ namespace Jacko.Services.ShoppingCartAPI.Data
 		{
 		}
 
-		public DbSet<CartHeader>  CartHeaders { get; set; }
-		public DbSet<CartDetails>  CartDetails { get; set; }
+		public virtual DbSet<CartHeader>  CartHeaders { get; set; }
+		public virtual DbSet<CartDetails>  CartDetails { get; set; }
 
         
     }

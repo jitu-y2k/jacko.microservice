@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jacko.Services.OrderAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80b450b7d29b470b8670071d344e82ad8bf8898f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e48d4f2ddc86655aba8881242d73cfa64dcec19")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jacko.Services.OrderAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jacko.Services.OrderAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,62 @@
+version: '3.4'
+
+services:
+  jacko.services.authapi:
+    image: ${DOCKER_REGISTRY-}/auth-service:latest
+    build:
+      context: .
+      dockerfile: Services/Jacko.Services.AuthAPI/Dockerfile
+    ports:
+      - "8083:8080"
+
+  jacko.services.productapi:
+    image: ${DOCKER_REGISTRY-}/product-service:latest
+    build:
+      context: .
+      dockerfile: Services/Jacko.Services.ProductAPI/Dockerfile
+    ports:
+      - "8081:8080"
+
+
+  jacko.web:
+    image: ${DOCKER_REGISTRY-}/jacko-frontend:latest
+    build:
+      context: .
+      dockerfile: FrontEnd/Jacko.Web/Dockerfile
+
+
+  jacko.services.couponapi:
+    image: ${DOCKER_REGISTRY-}/coupon-service:latest
+    build:
+      context: .
+      dockerfile: Services/Jacko.Services.CouponAPI/Dockerfile
+    ports:
+      - "8082:8080"
+
+  jacko.services.emailapi:
+    image: ${DOCKER_REGISTRY-}/email-service:latest
+    build:
+      context: .
+      dockerfile: Services/Jacko.Services.EmailAPI/Dockerfile
+
+
+  jacko.services.rewardapi:
+    image: ${DOCKER_REGISTRY-}/reward-service:latest
+    build:
+      context: .
+      dockerfile: Services/Jacko.Services.RewardAPI/Dockerfile
+
+  jacko.services.orderapi:
+    image: ${DOCKER_REGISTRY-}/order-service:latest
+    build:
+      context: .
+      dockerfile: Services/Jacko.Services.OrderAPI/Dockerfile
+
+  jacko.services.shoppingcartapi:
+    image: ${DOCKER_REGISTRY-}/cart-service:latest
+    build:
+      context: .
+      dockerfile: Services/Jacko.Services.ShoppingCartAPI/Dockerfile
+
+
+

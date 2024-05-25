@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <DockerComposeProjectPath>../../docker-compose.dcproj</DockerComposeProjectPath>
     <UserSecretsId>e7649e88-0594-481c-9d0f-d0b32d7ee821</UserSecretsId>
+    <!--<PreserveCompilationContext>true</PreserveCompilationContext>-->
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
@@ -36,4 +37,9 @@
     <Folder Include="Controllers\" />
     <Folder Include="Extensions\" />
   </ItemGroup>
+
+  <ItemGroup>
+     <InternalsVisibleTo Include="Jacko.Services.ProductAPI.Tests" />
+     <InternalsVisibleTo Include="Jacko.Services.ShoppingCartAPI.Tests" />
+</ItemGroup>
 </Project>

@@ -42,4 +42,8 @@
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
+
+  <ItemGroup>
+     <InternalsVisibleTo Include="Jacko.Services.ShoppingCartAPI.Tests" />
+</ItemGroup>
 </Project>

@@ -2,7 +2,7 @@
 using Jacko.Services.ShoppingCartAPI.Service.IService;
 using Newtonsoft.Json;
 
-namespace Mango.Services.ShoppingCartAPI.Service
+namespace Jacko.Services.ShoppingCartAPI.Service
 {
     public class CouponService : ICouponService
     {

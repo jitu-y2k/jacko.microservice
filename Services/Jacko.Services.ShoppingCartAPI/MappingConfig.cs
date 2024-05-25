@@ -3,7 +3,7 @@ using AutoMapper;
 using Jacko.Services.ShoppingCartAPI.Models;
 using Jacko.Services.ShoppingCartAPI.Models.Dto;
 
-namespace Jacko.Services.ProductAPI
+namespace Jacko.Services.ShoppingCartAPI
 {
 	public class MappingConfig
 	{

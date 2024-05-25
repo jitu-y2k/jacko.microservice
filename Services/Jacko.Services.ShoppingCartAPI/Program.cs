@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Jacko.MessageBus;
-using Jacko.Services.ProductAPI;
+using Jacko.Services.ShoppingCartAPI;
 using Jacko.Services.ShoppingCartAPI.Data;
 using Jacko.Services.ShoppingCartAPI.Extensions;
 using Jacko.Services.ShoppingCartAPI.Service.IService;
 using Jacko.Services.ShoppingCartAPI.Utility;
-using Mango.Services.ShoppingCartAPI.Service;
+using Jacko.Services.ShoppingCartAPI.Service;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -57,7 +57,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-ApplyMigration();
+//ApplyMigration();
 
 app.Run();
 
@@ -74,3 +74,4 @@ void ApplyMigration()
     }
 }
 
+public partial class Program{}
